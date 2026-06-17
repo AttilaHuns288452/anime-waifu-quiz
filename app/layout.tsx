@@ -31,8 +31,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://animewaifuquiz.xyz",
-    siteName: "Anime Waifu/Husbando Quiz",
+    url: "https://www.animewaifucompatibility.xyz",
+    siteName: "Anime Waifu Compatibility Quiz",
     title: "Which Anime Waifu/Husbando Are You? — Personality Quiz",
     description: "Answer 15 fun questions and discover your perfect anime character match! 70+ characters from Naruto, AOT, JJK, Demon Slayer, and more!",
     images: [

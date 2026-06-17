@@ -108,7 +108,7 @@ export default function AnimeQuiz() {
   };
 
   const shareText = result
-    ? `I got ${result.character.name} (${result.compatibility}% match)! 💕 Find your anime match: https://animewaifuquiz.xyz`
+    ? `I got ${result.character.name} (${result.compatibility}% match)! 💕 Find your anime match: https://www.animewaifucompatibility.xyz`
     : "";
 
   // --- Loading Screen ---
