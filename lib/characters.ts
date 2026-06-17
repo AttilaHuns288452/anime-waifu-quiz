@@ -36,6 +36,7 @@ export const CHARACTERS: Character[] = [
     description: "Quiet, powerful, and unwavering. Mikasa Ackerman speaks through actions and protects with absolute dedication.",
     matchReason: "You're protective, loyal, and don't waste words. Your strength shows when the people you care about need you.",
     emoji: "⚔️",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b40881-F3gr1PkreDvj.png",
   },
   {
     id: "rem",
@@ -47,6 +48,7 @@ export const CHARACTERS: Character[] = [
     description: "Hardworking, loyal, and self-sacrificing. Rem finds purpose in serving others and will move mountains for those they believe in.",
     matchReason: "You're the kind of person who gives everything to the people you care about. Your loyalty is your superpower.",
     emoji: "🔵",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b88575-Ayu8UPDA8NS6.png",
   },
   {
     id: "yor-forger",
@@ -58,6 +60,7 @@ export const CHARACTERS: Character[] = [
     description: "Sweet on the outside, fierce underneath. Yor Forger is a contradiction — gentle yet powerful, clumsy yet precise.",
     matchReason: "You have two sides: soft and sweet with the people you love, but nobody messes with what's yours.",
     emoji: "💀",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b138102-ZOAu9jI2d5ke.png",
   },
   {
     id: "nobara-kugisaki",
@@ -69,6 +72,7 @@ export const CHARACTERS: Character[] = [
     description: "Confident, bold, and unapologetically themselves. Nobara Kugisaki knows their worth and isn't afraid to show it.",
     matchReason: "You're confident, don't take crap from anyone, and you know exactly who you are. That energy is magnetic.",
     emoji: "🔨",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b133700-f6sOO3TcgLV6.png",
   },
   {
     id: "shinobu-kocho",
@@ -80,6 +84,7 @@ export const CHARACTERS: Character[] = [
     description: "Calm, collected, and deadly intelligent. Shinobu Kocho hides a burning resolve behind an eternal graceful smile.",
     matchReason: "You're sharp, strategic, and keep your cool under pressure. People underestimate you — that's their mistake.",
     emoji: "🦋",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b136070-MC9LLxJsHyHE.png",
   },
   {
     id: "asuna-yuuki",
@@ -91,6 +96,7 @@ export const CHARACTERS: Character[] = [
     description: "Strong-willed, caring, and a natural leader. Asuna Yuuki balances fierce determination with genuine warmth for others.",
     matchReason: "You're ambitious and capable, but you never lose your soft side. You lead with both strength and heart.",
     emoji: "⚔️",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b36828-j5ib0adAzGMx.png",
   },
   {
     id: "marin-kitagawa",
@@ -102,6 +108,7 @@ export const CHARACTERS: Character[] = [
     description: "Energetic, passionate, and unapologetically enthusiastic. Marin Kitagawa chases what they love with full force.",
     matchReason: "You're bubbly, passionate, and you inspire everyone around you. Your energy is contagious and people love being near you.",
     emoji: "❤️",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b133676-kV2czE3C8Qls.png",
   },
   {
     id: "frieren",
@@ -113,6 +120,7 @@ export const CHARACTERS: Character[] = [
     description: "Wise, thoughtful, and quietly playful. Frieren views life through a unique lens, cherishing fleeting moments.",
     matchReason: "You're introspective and value deep connections. You understand that the best things in life are fleeting — and that's what makes them beautiful.",
     emoji: "✨",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b176754-PCnpqIOkjhFk.png",
   },
   {
     id: "boa-hancock",
@@ -124,6 +132,7 @@ export const CHARACTERS: Character[] = [
     description: "Proud, beautiful, and completely devoted to love. Boa Hancock rules with absolute confidence but melts for the one they cherish.",
     matchReason: "You have an unstoppable confidence that draws people in, but underneath it all, you're a romantic at heart.",
     emoji: "🐍",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b16342-kVOF6V5Q94go.png",
   },
   {
     id: "rukia-kuchiki",
@@ -135,6 +144,7 @@ export const CHARACTERS: Character[] = [
     description: "Dignified, responsible, and secretly caring. Rukia Kuchiki upholds tradition but isn't afraid to break rules for friends.",
     matchReason: "You're responsible and dependable, but you have a playful side that comes out with the people you trust.",
     emoji: "❄️",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b6-25WoBeWMZXBc.png",
   },
   {
     id: "mitsuri-kanroji",
@@ -146,6 +156,7 @@ export const CHARACTERS: Character[] = [
     description: "Gentle, loving, and surprisingly powerful. Mitsuri Kanroji wants everyone to find love and happiness.",
     matchReason: "You're a hopeless romantic who believes in love and connection. Your warmth and strength together make you unforgettable.",
     emoji: "🌸",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b136072-xVwyRUKdpybi.png",
   },
   {
     id: "erza-scarlet",
@@ -157,6 +168,7 @@ export const CHARACTERS: Character[] = [
     description: "The definition of strength and discipline. Erza Scarlet leads with courage and would face any army alone for their friends.",
     matchReason: "You're a natural protector. Strong, disciplined, and utterly reliable. People look to you when things get tough.",
     emoji: "🛡️",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b5189-GR1xdok9SFsN.jpg",
   },
   {
     id: "makima",
@@ -168,6 +180,7 @@ export const CHARACTERS: Character[] = [
     description: "Charismatic, calculating, and always steps ahead. Makima commands control with a serene, knowing smile.",
     matchReason: "You're ambitious, strategic, and you always know what you want. People are drawn to your confidence and vision.",
     emoji: "🐶",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b137080-UHcynYNjb5ZU.png",
   },
   {
     id: "kaguya-shinomiya",
@@ -179,6 +192,7 @@ export const CHARACTERS: Character[] = [
     description: "Brilliant, proud, and emotionally guarded. Kaguya Shinomiya is a master of strategy but completely lost when it comes to matters of the heart.",
     matchReason: "You're intelligent and composed, but deep down you just want someone who understands the real you.",
     emoji: "👑",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b120649-NPaWaIpWy60E.png",
   },
   {
     id: "chika-fujiwara",
@@ -190,6 +204,7 @@ export const CHARACTERS: Character[] = [
     description: "Bubbly, unpredictable, and utterly chaotic. Chika Fujiwara lives in their own world of fun and drags everyone along for the ride.",
     matchReason: "You're the life of the party. Your energy is absolutely infectious and you make everything more fun.",
     emoji: "🎵",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b121103-UGLxT8utLPnq.png",
   },
   {
     id: "mai-sakurajima",
@@ -201,6 +216,7 @@ export const CHARACTERS: Character[] = [
     description: "Mature, witty, and refreshingly honest. Mai Sakurajima is a level-headed realist with a surprisingly playful teasing side.",
     matchReason: "You're sharp, witty, and you see through people's nonsense. Your sarcasm is a love language.",
     emoji: "🐰",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b127222-Jh5hhP7vZ7s1.png",
   },
   {
     id: "mitsuha-miyamizu",
@@ -212,6 +228,7 @@ export const CHARACTERS: Character[] = [
     description: "Restless, romantic, and deeply feeling. Mitsuha Miyamizu longs for something more and believes in the magic of connection.",
     matchReason: "You're a dreamer at heart. You feel everything deeply and believe in fate, connection, and the beauty of the universe.",
     emoji: "🌌",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b121514-MGI7JRluscpz.png",
   },
   {
     id: "zero-two",
@@ -223,6 +240,7 @@ export const CHARACTERS: Character[] = [
     description: "Wild, passionate, and desperate to be loved. Zero Two burns bright and fierce, searching for their one true partner.",
     matchReason: "You're intense, passionate, and you love with everything you have. You're looking for someone who completes you.",
     emoji: "👹",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b124381-pkTKi6HHNuVR.png",
   },
   {
     id: "yuno-gasai",
@@ -234,6 +252,7 @@ export const CHARACTERS: Character[] = [
     description: "Sweet, loving, and absolutely devoted. Yuno Gasai's love knows no bounds — they'd go to any length for their special someone.",
     matchReason: "When you love, you love completely. You'd go to the ends of the earth for the person you choose.",
     emoji: "🔪",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b4963-7ZMcCtXW5hkY.png",
   },
   {
     id: "taiga-aisaka",
@@ -245,6 +264,7 @@ export const CHARACTERS: Character[] = [
     description: "Small but fierce. Taiga Aisaka is prickly on the outside but soft and caring underneath the tough exterior.",
     matchReason: "You act tough but you're a softie at heart. You push people away but secretly hope they'll stay.",
     emoji: "🐯",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b12064-7PDN3ylIeAZn.png",
   },
   {
     id: "kurisu-makise",
@@ -256,6 +276,7 @@ export const CHARACTERS: Character[] = [
     description: "Brilliant scientist who hides emotions behind logic. Kurisu Makise is sharp, passionate about their work, and secretly soft-hearted.",
     matchReason: "You're brilliant and logical, but you have a hidden soft side. You value intelligence and deep conversation.",
     emoji: "⚡",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b34470-Jw2LXZBL5R8i.png",
   },
   {
     id: "megumin",
@@ -267,6 +288,7 @@ export const CHARACTERS: Character[] = [
     description: "Dramatic, passionate, and completely committed to their craft. Megumin has a very specific specialty and they're ALL about it.",
     matchReason: "You're passionate about your niche interests and you don't care who knows it. Your enthusiasm is adorable and fierce.",
     emoji: "💥",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b89361-tq8PQQ4MmF0M.png",
   },
   {
     id: "violet-evergarden",
@@ -278,6 +300,7 @@ export const CHARACTERS: Character[] = [
     description: "Once a weapon, now learning what love means. Violet Evergarden's journey to understand human emotions is beautiful and heartbreaking.",
     matchReason: "You're deeply emotional but may struggle to express it. Your journey is one of learning to open your heart to others.",
     emoji: "🌹",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b90169-4wr1Zehnsac8.png",
   },
   {
     id: "power",
@@ -289,6 +312,7 @@ export const CHARACTERS: Character[] = [
     description: "Chaotic, loud, and completely self-serving. Power is a force of nature who says exactly what they think.",
     matchReason: "You're unapologetically yourself: chaotic, loud, and proud. Normal is boring — you're anything but.",
     emoji: "🩸",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b137079-6yLEUYR3bmpr.png",
   },
   {
     id: "holo",
@@ -300,6 +324,7 @@ export const CHARACTERS: Character[] = [
     description: "Ancient, cunning, and playful. Holo is wise beyond years but never takes life too seriously.",
     matchReason: "You're wise beyond your years but you never take life too seriously. You love witty conversations and creature comforts.",
     emoji: "🐺",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b7373-1BH0gELuZmHD.jpg",
   },
   {
     id: "misato-katsuragi",
@@ -311,6 +336,7 @@ export const CHARACTERS: Character[] = [
     description: "Fun-loving by night, tactical genius by day. Misato Katsuragi hides deep wisdom behind a carefree persona.",
     matchReason: "You're the life of the party, but you carry hidden depths. You know how to have fun and get serious when it counts.",
     emoji: "🍺",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b1259-afTQkZ5SVMOn.png",
   },
   {
     id: "revy",
@@ -322,6 +348,7 @@ export const CHARACTERS: Character[] = [
     description: "Vibrant, takes-no-nonsense, and gloriously unapologetic. Revy lives by their own code and answers to no one.",
     matchReason: "You don't follow rules — you make them. You're fierce, independent, and you take what you want from life.",
     emoji: "🔫",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b458-tlKqPcuR287U.png",
   },
   {
     id: "yoruichi-shihouin",
@@ -333,6 +360,7 @@ export const CHARACTERS: Character[] = [
     description: "Playful, powerful, and hiding depths of wisdom. Yoruichi Shihouin can be a teasing trickster or a deadly warrior in seconds.",
     matchReason: "You're playful and sharp, but you have a serious side that commands respect. You're never quite what people expect.",
     emoji: "🐱",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b908-JSYUkJLCw1f0.png",
   },
   {
     id: "ochaco-uraraka",
@@ -344,6 +372,7 @@ export const CHARACTERS: Character[] = [
     description: "Sweet, determined, and endlessly optimistic. Ochaco Uraraka wants to help people and make their loved ones proud.",
     matchReason: "You're kind-hearted, optimistic, and driven by a desire to make the world better. You genuinely care about people.",
     emoji: "💖",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b89221-gSF2a4gPbG4m.png",
   },
   {
     id: "nezuko-kamado",
@@ -1279,6 +1308,7 @@ export const CHARACTERS: Character[] = [
     description: "Energetic, passionate, and unapologetically enthusiastic. Ino Yamanaka chases what they love with full force.",
     matchReason: "You're bubbly, passionate, and you inspire everyone around you. Your energy is contagious and people love being near you.",
     emoji: "🌸",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b2009-H7n38Ns1fr0Y.jpg",
   },
   {
     id: "haku-female",
@@ -1301,6 +1331,7 @@ export const CHARACTERS: Character[] = [
     description: "Sweet, determined, and endlessly optimistic. Orihime Inoue wants to help people and make their loved ones proud.",
     matchReason: "You're kind-hearted, optimistic, and driven by a desire to make the world better. You genuinely care about people.",
     emoji: "🍊",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b7-JdR4betokDjR.jpg",
   },
   {
     id: "yoruichi-shihouin",
@@ -1323,6 +1354,7 @@ export const CHARACTERS: Character[] = [
     description: "Quiet, powerful, and unwavering. Soi Fon speaks through actions and protects with absolute dedication.",
     matchReason: "You're protective, loyal, and don't waste words. Your strength shows when the people you care about need you.",
     emoji: "🐝",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b905-zKwCoIRiYJSr.png",
   },
   {
     id: "nel-tu",
@@ -1334,6 +1366,7 @@ export const CHARACTERS: Character[] = [
     description: "Energetic, passionate, and unapologetically enthusiastic. Nel Tu chases what they love with full force.",
     matchReason: "You're bubbly, passionate, and you inspire everyone around you. Your energy is contagious and people love being near you.",
     emoji: "😋",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b4730-zvzowqOHaQL2.png",
   },
   {
     id: "tier-harribel",
@@ -1345,6 +1378,7 @@ export const CHARACTERS: Character[] = [
     description: "Mature, witty, and refreshingly honest. Tier Harribel is a level-headed realist with a surprisingly playful teasing side.",
     matchReason: "You're sharp, witty, and you see through people's nonsense. Your sarcasm is a love language.",
     emoji: "🌊",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b3217-WahxtOqdRxJq.png",
   },
   {
     id: "lisa-yadomaru",
@@ -1367,6 +1401,7 @@ export const CHARACTERS: Character[] = [
     description: "Sweet, determined, and endlessly optimistic. Mash Kyrielight wants to help people and make their loved ones proud.",
     matchReason: "You're kind-hearted, optimistic, and driven by a desire to make the world better. You genuinely care about people.",
     emoji: "🛡️",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b120735-TjIeTlsKNaMl.jpg",
   },
   {
     id: "scthach",
@@ -1378,6 +1413,7 @@ export const CHARACTERS: Character[] = [
     description: "Calm, collected, and deadly intelligent. Scáthach hides a burning resolve behind an eternal graceful smile.",
     matchReason: "You're sharp, strategic, and keep your cool under pressure. People underestimate you — that's their mistake.",
     emoji: "🗡️",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b130864-wmp9712xUnEB.png",
   },
   {
     id: "jeanne-darc",
@@ -1400,6 +1436,7 @@ export const CHARACTERS: Character[] = [
     description: "Energetic, passionate, and unapologetically enthusiastic. Elizabeth Bathory chases what they love with full force.",
     matchReason: "You're bubbly, passionate, and you inspire everyone around you. Your energy is contagious and people love being near you.",
     emoji: "🎤",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b121162-OJEhnUj9tp78.png",
   },
   {
     id: "mordred",
@@ -1411,6 +1448,7 @@ export const CHARACTERS: Character[] = [
     description: "Confident, bold, and unapologetically themselves. Mordred knows their worth and isn't afraid to show it.",
     matchReason: "You're confident, don't take crap from anyone, and you know exactly who you are. That energy is magnetic.",
     emoji: "⚔️",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b55977-wqiEfiJUuEFw.png",
   },
   {
     id: "frankenstein",
@@ -1422,6 +1460,7 @@ export const CHARACTERS: Character[] = [
     description: "Shy, kind, and holding back incredible power. Frankenstein's journey is about emotional growth, not just physical strength.",
     matchReason: "You're quiet and humble, but you have incredible depths. Your kindness is your greatest power — never lose it.",
     emoji: "⚡",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b48753-li5DHzOcqkuT.jpg",
   },
   {
     id: "siesta",
@@ -1433,6 +1472,7 @@ export const CHARACTERS: Character[] = [
     description: "Mature, witty, and refreshingly honest. Siesta is a level-headed realist with a surprisingly playful teasing side.",
     matchReason: "You're sharp, witty, and you see through people's nonsense. Your sarcasm is a love language.",
     emoji: "🕵️",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b161742-5YJ759FUsZNf.png",
   },
   {
     id: "nagisa-furukawa",
@@ -1444,6 +1484,7 @@ export const CHARACTERS: Character[] = [
     description: "Quiet, kind-hearted, and fiercely loyal. Nagisa Furukawa is shy but has incredible inner strength when protecting those they love.",
     matchReason: "You're gentle on the outside but strong when it counts. You value deep connections and would do anything for the people you love.",
     emoji: "🌸",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b4604-YFJiWeuGSIYf.png",
   },
   {
     id: "kyou-fujibayashi",
@@ -1455,6 +1496,7 @@ export const CHARACTERS: Character[] = [
     description: "Small but fierce. Kyou Fujibayashi is prickly on the outside but soft and caring underneath the tough exterior.",
     matchReason: "You act tough but you're a softie at heart. You push people away but secretly hope they'll stay.",
     emoji: "📖",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b4605-a0D3NeVbCz1m.jpg",
   },
   {
     id: "tomoyo-sakagami",
@@ -1466,6 +1508,7 @@ export const CHARACTERS: Character[] = [
     description: "Confident, bold, and unapologetically themselves. Tomoyo Sakagami knows their worth and isn't afraid to show it.",
     matchReason: "You're confident, don't take crap from anyone, and you know exactly who you are. That energy is magnetic.",
     emoji: "💪",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b4603-pq4b7UGmmOyH.png",
   },
   {
     id: "kotomi-ichinose",
@@ -1477,6 +1520,7 @@ export const CHARACTERS: Character[] = [
     description: "Wise, thoughtful, and quietly playful. Kotomi Ichinose views life through a unique lens, cherishing fleeting moments.",
     matchReason: "You're introspective and value deep connections. You understand that the best things in life are fleeting — and that's what makes them beautiful.",
     emoji: "📚",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b4602-L9sSmkyQhZeC.jpg",
   },
   {
     id: "yukino-yukinoshita",
@@ -1488,6 +1532,7 @@ export const CHARACTERS: Character[] = [
     description: "Brilliant, proud, and emotionally guarded. Yukino Yukinoshita is a master of strategy but completely lost when it comes to matters of the heart.",
     matchReason: "You're intelligent and composed, but deep down you just want someone who understands the real you.",
     emoji: "❄️",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b67067-gqhgjlni0Bcf.png",
   },
   {
     id: "yui-yuigahama",
@@ -1499,6 +1544,7 @@ export const CHARACTERS: Character[] = [
     description: "Sweet, determined, and endlessly optimistic. Yui Yuigahama wants to help people and make their loved ones proud.",
     matchReason: "You're kind-hearted, optimistic, and driven by a desire to make the world better. You genuinely care about people.",
     emoji: "🍪",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b67069-6B3xnHfJUO0F.png",
   },
   {
     id: "iroha-isshiki",
@@ -1510,6 +1556,7 @@ export const CHARACTERS: Character[] = [
     description: "Playful, powerful, and hiding depths of wisdom. Iroha Isshiki can be a teasing trickster or a deadly warrior in seconds.",
     matchReason: "You're playful and sharp, but you have a serious side that commands respect. You're never quite what people expect.",
     emoji: "🌸",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b88727-K9H1teOxoSLP.png",
   },
   {
     id: "hachiman-hikigaya-fujo",
@@ -1532,6 +1579,7 @@ export const CHARACTERS: Character[] = [
     description: "Sweet on the outside, fierce underneath. Ai Hayasaka is a contradiction — gentle yet powerful, clumsy yet precise.",
     matchReason: "You have two sides: soft and sweet with the people you love, but nobody messes with what's yours.",
     emoji: "💼",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b121104-7TYRl3EEsDYU.png",
   },
   {
     id: "miko-iino",
@@ -1543,6 +1591,7 @@ export const CHARACTERS: Character[] = [
     description: "Dignified, responsible, and secretly caring. Miko Iino upholds tradition but isn't afraid to break rules for friends.",
     matchReason: "You're responsible and dependable, but you have a playful side that comes out with the people you trust.",
     emoji: "📋",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b125886-TQbmqAaSgBLS.png",
   },
   {
     id: "nagisa-shiota",
@@ -1554,6 +1603,7 @@ export const CHARACTERS: Character[] = [
     description: "Quiet, kind-hearted, and fiercely loyal. Nagisa Shiota is shy but has incredible inner strength when protecting those they love.",
     matchReason: "You're gentle on the outside but strong when it counts. You value deep connections and would do anything for the people you love.",
     emoji: "🍊",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b65645-nWH4mBMW5lYw.png",
   },
   {
     id: "akari-watanabe",
@@ -1565,6 +1615,7 @@ export const CHARACTERS: Character[] = [
     description: "Sweet, determined, and endlessly optimistic. Akari Watanabe wants to help people and make their loved ones proud.",
     matchReason: "You're kind-hearted, optimistic, and driven by a desire to make the world better. You genuinely care about people.",
     emoji: "💕",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b191672-MozVAnqyv9oZ.png",
   },
   {
     id: "shiori-sakurazaka",
@@ -1576,6 +1627,7 @@ export const CHARACTERS: Character[] = [
     description: "Quiet, kind-hearted, and fiercely loyal. Shiori Sakurazaka is shy but has incredible inner strength when protecting those they love.",
     matchReason: "You're gentle on the outside but strong when it counts. You value deep connections and would do anything for the people you love.",
     emoji: "🌸",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b273105-BUCVawntAuJF.png",
   },
   {
     id: "chizuru-ichinose",
@@ -1587,6 +1639,7 @@ export const CHARACTERS: Character[] = [
     description: "Mature, witty, and refreshingly honest. Chizuru Ichinose is a level-headed realist with a surprisingly playful teasing side.",
     matchReason: "You're sharp, witty, and you see through people's nonsense. Your sarcasm is a love language.",
     emoji: "🎬",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b128106-zSTsuULvz6PX.png",
   },
   {
     id: "mami-nanami",
@@ -1598,6 +1651,7 @@ export const CHARACTERS: Character[] = [
     description: "Charismatic, calculating, and always steps ahead. Mami Nanami commands control with a serene, knowing smile.",
     matchReason: "You're ambitious, strategic, and you always know what you want. People are drawn to your confidence and vision.",
     emoji: "🍵",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b154224-7dJ09BKEnG3v.png",
   },
   {
     id: "ruka-sarashina",
@@ -2500,6 +2554,7 @@ export const CHARACTERS: Character[] = [
     description: "Brilliant, charismatic, and willing to become a villain for the greater good. Erwin Smith is the ultimate chess master.",
     matchReason: "You're incredibly strategic and always thinking five moves ahead. You'd do whatever it takes to achieve your vision.",
     emoji: "🦅",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b46496-Mu86MENd5wNB.png",
   },
   {
     id: "izuku-midoriya",
@@ -2511,6 +2566,7 @@ export const CHARACTERS: Character[] = [
     description: "Gentle, empathetic, and impossibly kind. Izuku Midoriya feels compassion even for enemies but fights with fierce determination.",
     matchReason: "Your empathy is your greatest strength. You see the good in everyone and fight for what matters with all your heart.",
     emoji: "💚",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b89028-8w1I9o1ISHMg.png",
   },
   {
     id: "all-might",
@@ -2522,6 +2578,7 @@ export const CHARACTERS: Character[] = [
     description: "Passionate, loud, and endlessly encouraging. All Might believes in doing what's right with absolute burning conviction.",
     matchReason: "You're passionate and encouraging, lifting everyone around you. Your spirit is infectious and you live life with purpose.",
     emoji: "💪",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b89224-K6KEuQAuYKzq.jpg",
   },
   {
     id: "aizawa-shota",
@@ -2533,6 +2590,7 @@ export const CHARACTERS: Character[] = [
     description: "Always relaxed, always reading, always one step ahead. Aizawa Shota is the strong, silent type with a hidden playful streak.",
     matchReason: "You're talented but humble, always reading or learning something new. You let your actions speak louder than words.",
     emoji: "😴",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b89225-XBgvUhI9naVI.png",
   },
   {
     id: "hawks",
@@ -2544,6 +2602,7 @@ export const CHARACTERS: Character[] = [
     description: "Laid-back, stylish, and haunted by the past. Hawks drifts through life with style, fighting and philosophizing.",
     matchReason: "You're effortlessly cool and take life as it comes. You have a past that shaped you, but you keep moving forward.",
     emoji: "🪶",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b128299-eMEsWazNXE56.png",
   },
   {
     id: "traflagar-law",
@@ -2566,6 +2625,7 @@ export const CHARACTERS: Character[] = [
     description: "Vain, dramatic, and secretly insecure. Sanji hides their vulnerabilities behind charm and fabulous style.",
     matchReason: "You're charming and creative, but you have hidden depths. You're more than the persona you show the world.",
     emoji: "💋",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b305-6lisPmHtCnLT.png",
   },
   {
     id: "jimbei",
@@ -2577,6 +2637,7 @@ export const CHARACTERS: Character[] = [
     description: "A being of few words and incredible ambition. Jimbei's loyalty to their captain and their dream is absolute.",
     matchReason: "You're loyal to a fault and you never give up on your dreams. You'd follow your people to the ends of the earth.",
     emoji: "🐋",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b18938-yZANEfjsVhW4.png",
   },
   {
     id: "portgas-d-ace",
@@ -2588,6 +2649,7 @@ export const CHARACTERS: Character[] = [
     description: "Passionate, loud, and endlessly encouraging. Portgas D. Ace believes in doing what's right with absolute burning conviction.",
     matchReason: "You're passionate and encouraging, lifting everyone around you. Your spirit is infectious and you live life with purpose.",
     emoji: "🔥",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b2072-Lc6jEdsueJUK.jpg",
   },
   {
     id: "killua-zoldyck",
@@ -2599,6 +2661,7 @@ export const CHARACTERS: Character[] = [
     description: "Cool, quiet, and devastatingly effective. Killua Zoldyck says little but commands respect with every action.",
     matchReason: "You're the strong, silent type. You don't need to prove anything — your actions speak volumes.",
     emoji: "⚡",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b27-Z5O02kQUydpT.jpg",
   },
   {
     id: "gon-freecss",
@@ -2610,6 +2673,7 @@ export const CHARACTERS: Character[] = [
     description: "Goofy, fearless, and absolutely unstoppable. Gon Freecss's simple philosophy: protect your friends and chase your dreams.",
     matchReason: "You're free-spirited, optimistic, and you never abandon your friends. Life is an adventure and you're here for all of it.",
     emoji: "🎣",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b30-lyFExKyDhefc.jpg",
   },
   {
     id: "hisoka-morow",
@@ -2621,6 +2685,7 @@ export const CHARACTERS: Character[] = [
     description: "Arrogant beyond measure, yet their power backs up every word. Hisoka Morow sees everything as their treasure.",
     matchReason: "You know your worth and you're not afraid to show it. You demand the best because you know you deserve it.",
     emoji: "🃏",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b31-FZckOuu7L1un.png",
   },
   {
     id: "kurapika",
@@ -2632,6 +2697,7 @@ export const CHARACTERS: Character[] = [
     description: "Brooding, talented, and driven by purpose. Kurapika's cold exterior hides a heart that's been tested and a path of redemption.",
     matchReason: "You keep people at a distance, but you're on a personal journey of growth. You're not the same person you were yesterday.",
     emoji: "🔗",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b28-ivA7UGnfE40a.png",
   },
   {
     id: "yuji-itadori",
@@ -2654,6 +2720,7 @@ export const CHARACTERS: Character[] = [
     description: "Quiet, skilled, and fiercely protective. Megumi Fushiguro prefers to work alone but becomes unstoppable when fighting for friends.",
     matchReason: "You're independent and capable, but you open up completely to people you trust. Your loyalty is absolute.",
     emoji: "👻",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b126635-L0y3I92JSUkN.png",
   },
   {
     id: "toji-fushiguro",
@@ -2665,6 +2732,7 @@ export const CHARACTERS: Character[] = [
     description: "Cold, efficient, and absolutely the best. Toji Fushiguro's harsh exterior hides a deep care for those they protect.",
     matchReason: "You're a perfectionist who expects the best from yourself and others. You show love through action, not words.",
     emoji: "💀",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b162722-btzdghBizxKS.jpg",
   },
   {
     id: "ken-kaneki",
@@ -2676,6 +2744,7 @@ export const CHARACTERS: Character[] = [
     description: "Calm, wise, and carrying an impossible burden. Ken Kaneki sacrificed everything for the greater good.",
     matchReason: "You're deeply thoughtful and carry more than people realize. You make sacrifices quietly because you believe in a greater good.",
     emoji: "👁️",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b87275-mb13EWZBdbh3.png",
   },
   {
     id: "simon",
@@ -2687,6 +2756,7 @@ export const CHARACTERS: Character[] = [
     description: "Focused, competitive, and driven to be the best. Simon pushes themselves and everyone around them to greater heights.",
     matchReason: "You're competitive in the best way — you push people to be their best. Your rival is also your motivation.",
     emoji: "⚡",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b2257-jnalsdnIX1vN.jpg",
   },
   {
     id: "viral",
@@ -2698,6 +2768,7 @@ export const CHARACTERS: Character[] = [
     description: "Loud, proud, and explosively talented. Viral's abrasive exterior hides a deep drive to be the best.",
     matchReason: "You're competitive, driven, and you don't hide your intensity. Your passion comes across loud and clear — and that's powerful.",
     emoji: "🎯",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/n2378-UcNU2Pm8MlB9.png",
   },
   {
     id: "roy-mustang-already",
@@ -2720,6 +2791,7 @@ export const CHARACTERS: Character[] = [
     description: "Gentle, empathetic, and impossibly kind. Alphonse Elric feels compassion even for enemies but fights with fierce determination.",
     matchReason: "Your empathy is your greatest strength. You see the good in everyone and fight for what matters with all your heart.",
     emoji: "🛡️",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b12-tCKu8yK5kFL5.jpg",
   },
   {
     id: "touma-kamijou",
@@ -2731,6 +2803,7 @@ export const CHARACTERS: Character[] = [
     description: "Willing to sacrifice for anyone in need. Touma Kamijou is selfless to a fault, always getting involved in everyone's problems.",
     matchReason: "You can't help but get involved when someone needs help — even if it costs you. Your heart is too big for your own good.",
     emoji: "👊",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b13700-UidPPlVkGJLP.jpg",
   },
   {
     id: "accelerator",
@@ -2742,6 +2815,7 @@ export const CHARACTERS: Character[] = [
     description: "Calm, wise, and carrying an impossible burden. Accelerator sacrificed everything for the greater good.",
     matchReason: "You're deeply thoughtful and carry more than people realize. You make sacrifices quietly because you believe in a greater good.",
     emoji: "⚡",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b13917-160NVNDNgywA.png",
   },
   {
     id: "shirou-emiya",
@@ -2753,6 +2827,7 @@ export const CHARACTERS: Character[] = [
     description: "Gentle, empathetic, and impossibly kind. Shirou Emiya feels compassion even for enemies but fights with fierce determination.",
     matchReason: "Your empathy is your greatest strength. You see the good in everyone and fight for what matters with all your heart.",
     emoji: "⚔️",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b496-GI0waavDjyk3.png",
   },
   {
     id: "archer-emiya",
@@ -2775,6 +2850,7 @@ export const CHARACTERS: Character[] = [
     description: "A being of few words and incredible ambition. Diarmuid Ua Duibhne's loyalty to their captain and their dream is absolute.",
     matchReason: "You're loyal to a fault and you never give up on your dreams. You'd follow your people to the ends of the earth.",
     emoji: "🗡️",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b16022-rdonZr99a9XO.png",
   },
   {
     id: "kiritsugu-emiya",
@@ -2786,6 +2862,7 @@ export const CHARACTERS: Character[] = [
     description: "Cold, efficient, and absolutely the best. Kiritsugu Emiya's harsh exterior hides a deep care for those they protect.",
     matchReason: "You're a perfectionist who expects the best from yourself and others. You show love through action, not words.",
     emoji: "🔫",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b10010-fNspzan5MzNk.png",
   },
   {
     id: "iskandar-rider",
@@ -2808,6 +2885,7 @@ export const CHARACTERS: Character[] = [
     description: "Passionate, loud, and endlessly encouraging. Okita Souji believes in doing what's right with absolute burning conviction.",
     matchReason: "You're passionate and encouraging, lifting everyone around you. Your spirit is infectious and you live life with purpose.",
     emoji: "⚔️",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b138910-uMquAkRSieR8.jpg",
   },
   {
     id: "koro-sensei",
@@ -2819,6 +2897,7 @@ export const CHARACTERS: Character[] = [
     description: "Playful, arrogant, and absurdly powerful. Koro-sensei topples tradition while cracking jokes — because who can stop them?",
     matchReason: "You're confident, charismatic, and you refuse to take life too seriously — mostly because you know you've got this.",
     emoji: "🐙",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b65643-jimrOw0RGtoB.png",
   },
   {
     id: "nagisa-shiota",
@@ -3655,6 +3734,7 @@ export const CHARACTERS: Character[] = [
     description: "Quiet, powerful, and unwavering. Ais Wallenstein speaks through actions and protects with absolute dedication.",
     matchReason: "You're protective, loyal, and don't waste words. Your strength shows when the people you care about need you.",
     emoji: "⚔️",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b87655-7QjpIyyZuqyp.png",
   },
   {
     id: "rudeus-greyrat",
@@ -3666,6 +3746,7 @@ export const CHARACTERS: Character[] = [
     description: "Eccentric, dramatic, and secretly brilliant. Rudeus Greyrat plays the fool to hide their genius and their pain.",
     matchReason: "You're a little weird and totally okay with it. Your quirks are what make you brilliant.",
     emoji: "📚",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b88348-bIe5XnXdRpmX.png",
   },
   {
     id: "subaru-natsuki",
@@ -3677,6 +3758,7 @@ export const CHARACTERS: Character[] = [
     description: "Eccentric, dramatic, and secretly brilliant. Subaru Natsuki plays the fool to hide their genius and their pain.",
     matchReason: "You're a little weird and totally okay with it. Your quirks are what make you brilliant.",
     emoji: "🌀",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b88573-F8yMTK9GhnTA.png",
   },
   {
     id: "julius-juukulius",
@@ -3688,6 +3770,7 @@ export const CHARACTERS: Character[] = [
     description: "Ambitious, charismatic, and seemingly lazy — until it matters. Julius Juukulius plays the fool while climbing toward a world-changing goal.",
     matchReason: "You're ambitious and strategic, but you know how to play the long game. People underestimate you — your favorite advantage.",
     emoji: "⚔️",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b90183-LWx59kSa5Vjl.png",
   },
   {
     id: "reinhard-van-astrea",
@@ -3699,6 +3782,7 @@ export const CHARACTERS: Character[] = [
     description: "Gentle, empathetic, and impossibly kind. Reinhard van Astrea feels compassion even for enemies but fights with fierce determination.",
     matchReason: "Your empathy is your greatest strength. You see the good in everyone and fight for what matters with all your heart.",
     emoji: "👑",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b88577-oKKnibqGgSSD.png",
   },
   {
     id: "garfield-tinsel",
@@ -3721,6 +3805,7 @@ export const CHARACTERS: Character[] = [
     description: "Eccentric, dramatic, and secretly brilliant. Roswaal Mathers plays the fool to hide their genius and their pain.",
     matchReason: "You're a little weird and totally okay with it. Your quirks are what make you brilliant.",
     emoji: "🎭",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b90182-Ho0NS06tc6NL.png",
   },
   {
     id: "naofumi-iwatani",
@@ -3732,6 +3817,7 @@ export const CHARACTERS: Character[] = [
     description: "Cold, efficient, and absolutely the best. Naofumi Iwatani's harsh exterior hides a deep care for those they protect.",
     matchReason: "You're a perfectionist who expects the best from yourself and others. You show love through action, not words.",
     emoji: "🛡️",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b88817-Aku5CuN6wO2z.png",
   },
   {
     id: "motoyasu-kitamura",
@@ -3743,6 +3829,7 @@ export const CHARACTERS: Character[] = [
     description: "Goofy, fearless, and absolutely unstoppable. Motoyasu Kitamura's simple philosophy: protect your friends and chase your dreams.",
     matchReason: "You're free-spirited, optimistic, and you never abandon your friends. Life is an adventure and you're here for all of it.",
     emoji: "🗡️",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b129809-wYFq4QSlFVha.jpg",
   },
   {
     id: "ren-amaki",
@@ -3754,6 +3841,7 @@ export const CHARACTERS: Character[] = [
     description: "Quiet, skilled, and fiercely protective. Ren Amaki prefers to work alone but becomes unstoppable when fighting for friends.",
     matchReason: "You're independent and capable, but you open up completely to people you trust. Your loyalty is absolute.",
     emoji: "⚔️",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b129812-mNAmoHxmHCwd.png",
   },
   {
     id: "itsuki-kawasumi",
@@ -3765,6 +3853,7 @@ export const CHARACTERS: Character[] = [
     description: "A rebel with a cause, leading a team of outcasts to change corrupt hearts. Cool, capable, and fiercely loyal.",
     matchReason: "You stand up for the oppressed and fight against injustice. Your friends are your family and you'd do anything for them.",
     emoji: "🏹",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b129814-yinjCKhaHQcb.png",
   },
   {
     id: "seiya-ryuuguuin",
@@ -3787,6 +3876,7 @@ export const CHARACTERS: Character[] = [
     description: "Always relaxed, always reading, always one step ahead. Sadao Maou is the strong, silent type with a hidden playful streak.",
     matchReason: "You're talented but humble, always reading or learning something new. You let your actions speak louder than words.",
     emoji: "🍔",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b70733-d564H7iUj7Y2.png",
   },
   {
     id: "shinya-kogami",
@@ -3853,6 +3943,7 @@ export const CHARACTERS: Character[] = [
     description: "Confident, bold, and unapologetically themselves. Touka Kirishima knows their worth and isn't afraid to show it.",
     matchReason: "You're confident, don't take crap from anyone, and you know exactly who you are. That energy is magnetic.",
     emoji: "😼",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b87277-oUaqrI1iBzu6.png",
   },
   {
     id: "ayato-kirishima",
@@ -3864,6 +3955,7 @@ export const CHARACTERS: Character[] = [
     description: "Loud, proud, and explosively talented. Ayato Kirishima's abrasive exterior hides a deep drive to be the best.",
     matchReason: "You're competitive, driven, and you don't hide your intensity. Your passion comes across loud and clear — and that's powerful.",
     emoji: "🌀",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b88411-dI6vqLy4pvHK.png",
   },
   {
     id: "kishou-arima",
@@ -3875,6 +3967,7 @@ export const CHARACTERS: Character[] = [
     description: "Cold, efficient, and absolutely the best. Kishou Arima's harsh exterior hides a deep care for those they protect.",
     matchReason: "You're a perfectionist who expects the best from yourself and others. You show love through action, not words.",
     emoji: "👓",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b88946-YbTQAGJAdpoH.jpg",
   },
   {
     id: "sasaki-haise",
@@ -3897,6 +3990,7 @@ export const CHARACTERS: Character[] = [
     description: "Gentle, empathetic, and impossibly kind. Eugeo feels compassion even for enemies but fights with fierce determination.",
     matchReason: "Your empathy is your greatest strength. You see the good in everyone and fight for what matters with all your heart.",
     emoji: "⚔️",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b70899-TwMq5mtH5ifc.jpg",
   },
   {
     id: "klein",
@@ -3908,6 +4002,7 @@ export const CHARACTERS: Character[] = [
     description: "Always relaxed, always reading, always one step ahead. Klein is the strong, silent type with a hidden playful streak.",
     matchReason: "You're talented but humble, always reading or learning something new. You let your actions speak louder than words.",
     emoji: "⚔️",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b138100-4Li0tWRCa5bQ.png",
   },
   {
     id: "heathcliff",
@@ -3919,6 +4014,7 @@ export const CHARACTERS: Character[] = [
     description: "Arrogant beyond measure, yet their power backs up every word. Heathcliff sees everything as their treasure.",
     matchReason: "You know your worth and you're not afraid to show it. You demand the best because you know you deserve it.",
     emoji: "🛡️",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b235847-GdRns9v1BqbX.png",
   },
   {
     id: "takumi-aldini",
@@ -3930,6 +4026,7 @@ export const CHARACTERS: Character[] = [
     description: "Ambitious, charismatic, and seemingly lazy — until it matters. Takumi Aldini plays the fool while climbing toward a world-changing goal.",
     matchReason: "You're ambitious and strategic, but you know how to play the long game. People underestimate you — your favorite advantage.",
     emoji: "🔪",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b85777-up7wugPUGKBv.jpg",
   },
   {
     id: "soma-yukihira",
@@ -3941,6 +4038,7 @@ export const CHARACTERS: Character[] = [
     description: "Playful, arrogant, and absurdly powerful. Soma Yukihira topples tradition while cracking jokes — because who can stop them?",
     matchReason: "You're confident, charismatic, and you refuse to take life too seriously — mostly because you know you've got this.",
     emoji: "🍳",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b75216-KDU8333eIcqf.jpg",
   },
   {
     id: "eishi-tsukasa",
@@ -3952,6 +4050,7 @@ export const CHARACTERS: Character[] = [
     description: "Stoic, conflicted, and coming into their own. Eishi Tsukasa learns to accept both sides of themselves — cool logic and burning passion.",
     matchReason: "You're coming to terms with who you are. You have different sides to your personality and you're learning to embrace them all.",
     emoji: "👨‍🍳",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b121219-7pAoCToE3MWn.png",
   },
   {
     id: "ryo-kurokiba",
@@ -3974,6 +4073,7 @@ export const CHARACTERS: Character[] = [
     description: "Focused, competitive, and driven to be the best. Rin Okumura pushes themselves and everyone around them to greater heights.",
     matchReason: "You're competitive in the best way — you push people to be their best. Your rival is also your motivation.",
     emoji: "🔥",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b24482-E6087V4uAVqL.jpg",
   },
   {
     id: "yukio-okumura",
