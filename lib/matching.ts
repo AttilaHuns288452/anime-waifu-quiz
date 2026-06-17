@@ -9,8 +9,9 @@ export interface QuizAnswer {
 export interface QuizResult {
   character: Character;
   compatibility: number;
-  certainty: number; // how confident we are (0-100)
+  certainty: number;
   runnerUp: { character: Character; compatibility: number } | null;
+  top10: { character: Character; compatibility: number }[];
   profile: {
     e: number;
     l: number;
@@ -129,6 +130,10 @@ export function findMatches(answers: QuizAnswer[], preferredGender: "waifu" | "h
     runnerUp: scored[1]
       ? { character: scored[1].character, compatibility: scored[1].compatibility }
       : null,
+    top10: scored.slice(0, 10).map(s => ({
+      character: s.character,
+      compatibility: s.compatibility,
+    })),
     profile: userProfile,
   };
 }

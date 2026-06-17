@@ -291,6 +291,63 @@ export default function AnimeQuiz() {
               </div>
             )}
 
+            {/* Top 10 Rankings */}
+            <div className="animate-fade-in-up" style={{ animationDelay: "0.35s" }}>
+              <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+                <span>🏆</span> Your Top 10 Matches
+              </h3>
+              <div className="space-y-2">
+                {result.top10.map((match, i) => {
+                  const medals = ["🥇", "🥈", "🥉"];
+                  const rank = i < 3 ? medals[i] : `${i + 1}.`;
+                  return (
+                    <div
+                      key={match.character.id}
+                      className={`flex items-center gap-3 p-3 rounded-xl border transition-all ${
+                        i === 0
+                          ? "bg-gradient-to-r from-yellow-50 to-amber-50 border-yellow-300 shadow-sm"
+                          : i === 1
+                          ? "bg-gray-50 border-gray-200"
+                          : i === 2
+                          ? "bg-orange-50/50 border-orange-200"
+                          : "bg-white border-gray-100 hover:bg-gray-50"
+                      }`}
+                    >
+                      <span className="text-lg w-8 text-center">{rank}</span>
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center overflow-hidden flex-shrink-0 border border-gray-200">
+                        {match.character.imageUrl ? (
+                          <img src={match.character.imageUrl} alt="" className="w-full h-full object-cover" />
+                        ) : (
+                          <span className="text-lg">{match.character.emoji}</span>
+                        )}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="font-semibold text-gray-900 text-sm truncate">{match.character.name}</p>
+                        <p className="text-xs text-gray-500 truncate">{match.character.series}</p>
+                      </div>
+                      <div className="text-right flex-shrink-0">
+                        <span className={`text-sm font-bold ${
+                          match.compatibility >= 80 ? "text-green-600" :
+                          match.compatibility >= 60 ? "text-blue-600" : "text-gray-500"
+                        }`}>
+                          {match.compatibility}%
+                        </span>
+                        <div className="w-16 h-1.5 bg-gray-200 rounded-full mt-1">
+                          <div
+                            className={`h-full rounded-full ${
+                              match.compatibility >= 80 ? "bg-green-500" :
+                              match.compatibility >= 60 ? "bg-blue-500" : "bg-gray-400"
+                            }`}
+                            style={{ width: `${match.compatibility}%` }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
             {/* Share Buttons */}
             <div className="flex flex-wrap gap-3 pt-2 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
               <button
