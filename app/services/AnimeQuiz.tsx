@@ -137,6 +137,11 @@ export default function AnimeQuiz() {
       { name: "Spike Spiegel", series: "Cowboy Bebop", emoji: "🎷" },
       { name: "Eren Yeager", series: "AOT", emoji: "🐦" },
       { name: "Itachi Uchiha", series: "Naruto", emoji: "👁️" },
+      { name: "Yor Forger", series: "Spy × Family", emoji: "💀" },
+      { name: "Asuna Yuuki", series: "SAO", emoji: "⚔️" },
+      { name: "Killua", series: "Hunter × Hunter", emoji: "⚡" },
+      { name: "Rengoku", series: "Demon Slayer", emoji: "🔥" },
+      { name: "Guts", series: "Berserk", emoji: "⚔️" },
     ];
 
     return (
@@ -153,7 +158,7 @@ export default function AnimeQuiz() {
 
           {/* Featured Characters */}
           <div className="mb-8">
-            <p className="text-sm text-gray-400 mb-3">Featuring 70+ characters including:</p>
+            <p className="text-sm text-gray-400 mb-3">Featuring {CHARACTERS.length}+ characters including:</p>
             <div className="flex flex-wrap justify-center gap-2">
               {featured.map((ch) => (
                 <span key={ch.name} className="inline-flex items-center gap-1 px-3 py-1.5 bg-white/80 border border-gray-200 rounded-full text-sm shadow-sm hover:shadow-md transition-shadow">
