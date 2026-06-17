@@ -200,10 +200,25 @@ export default function AnimeQuiz() {
       <div className="max-w-2xl mx-auto px-4 py-8">
         <div className="animate-fade-in-scale">
           {/* Result Hero */}
-          <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 p-8 md:p-10 text-white text-center rounded-2xl shadow-2xl animate-pulse-glow relative overflow-hidden">
+          <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 text-white text-center rounded-2xl shadow-2xl animate-pulse-glow relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full opacity-10 animate-gradient" style={{backgroundImage: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"}} />
-            <div className="relative z-10">
-              <div className="text-7xl mb-4 heartbeat">{c.emoji}</div>
+            <div className="relative z-10 p-8 md:p-10">
+              {/* Character Image */}
+              <div className="flex justify-center mb-4">
+                <div className="w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-white/30 shadow-2xl overflow-hidden bg-white/10 flex items-center justify-center">
+                  {c.imageUrl ? (
+                    <img
+                      src={c.imageUrl}
+                      alt={c.name}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                      onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                    />
+                  ) : (
+                    <span className="text-7xl heartbeat">{c.emoji}</span>
+                  )}
+                </div>
+              </div>
               <p className="text-purple-200 text-sm uppercase tracking-widest mb-2">
                 ✨ Your Perfect Match — {result.compatibility}% Compatible ✨
               </p>
