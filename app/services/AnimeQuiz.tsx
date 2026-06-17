@@ -382,6 +382,21 @@ export default function AnimeQuiz() {
               </button>
             </div>
 
+            {/* Anime Recommendations Link */}
+            <div className="mt-2 animate-fade-in-up" style={{ animationDelay: "0.45s" }}>
+              <a
+                href="/recommendations"
+                className="flex items-center gap-3 p-4 bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-xl hover:shadow-md hover:border-purple-300 transition-all"
+              >
+                <span className="text-2xl">🎬</span>
+                <div className="flex-1">
+                  <p className="font-bold text-gray-900 text-sm">Anime Recommendations for You</p>
+                  <p className="text-xs text-gray-500">Discover anime that match your personality type</p>
+                </div>
+                <span className="text-purple-600">→</span>
+              </a>
+            </div>
+
             {/* Share Modal */}
             {showShareModal && (
               <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm" onClick={() => setShowShareModal(false)}>

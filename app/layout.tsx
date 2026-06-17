@@ -75,6 +75,7 @@ export default function RootLayout({
             <nav className="flex gap-4 text-sm text-gray-600">
               <a href="/" className="hover:text-purple-600">Quiz</a>
               <a href="/library" className="hover:text-purple-600">Library</a>
+              <a href="/recommendations" className="hover:text-purple-600">Anime</a>
               <a href="#feedback" className="hover:text-purple-600">Feedback</a>
             </nav>
           </div>
