@@ -55,7 +55,7 @@ function LoadingScreen({ onFinish }: { onFinish: () => void }) {
       <div className="loading-spinner mb-8" />
       <div className="text-4xl mb-4 heartbeat">💕</div>
       <p className="text-xl text-white/80 font-medium">Finding your match{dots}</p>
-      <p className="text-sm text-white/40 mt-2">Analyzing your personality...</p>
+      <p className="text-sm text-white/40 mt-2">Analyzing across 20 personality dimensions...</p>
       <div className="mt-8 flex gap-3">
         {["✨", "🌟", "💫", "⭐"].map((s, i) => (
           <span key={i} className="text-2xl sparkle" style={{ animationDelay: `${i * 0.3}s` }}>{s}</span>
@@ -118,6 +118,16 @@ export default function AnimeQuiz() {
 
   // --- Gender Selection Screen ---
   if (!gender) {
+    // Featured characters for the landing page
+    const featured = [
+      { name: "Hinata Hyuga", series: "Naruto", emoji: "💜" },
+      { name: "Gojo Satoru", series: "JJK", emoji: "🕶️" },
+      { name: "Levi Ackerman", series: "AOT", emoji: "🧹" },
+      { name: "Rem", series: "Re:Zero", emoji: "🔵" },
+      { name: "Zoro", series: "One Piece", emoji: "⚔️" },
+      { name: "Marin Kitagawa", series: "My Dress-Up Darling", emoji: "❤️" },
+    ];
+
     return (
       <>
         <SakuraBackground />
@@ -126,9 +136,23 @@ export default function AnimeQuiz() {
           <h1 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 bg-clip-text text-transparent">
             Which Anime Match Are You?
           </h1>
-          <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-            Answer <strong>15 fun questions</strong> and discover your perfect <strong>waifu or husbando</strong> — based on your real personality, not random!
+          <p className="text-gray-600 mb-6 text-lg leading-relaxed">
+            Answer <strong>20 personality questions</strong> and discover your perfect <strong>waifu or husbando</strong> match — like Akinator, but for anime!
           </p>
+
+          {/* Featured Characters */}
+          <div className="mb-8">
+            <p className="text-sm text-gray-400 mb-3">Featuring 70+ characters including:</p>
+            <div className="flex flex-wrap justify-center gap-2">
+              {featured.map((ch) => (
+                <span key={ch.name} className="inline-flex items-center gap-1 px-3 py-1.5 bg-white/80 border border-gray-200 rounded-full text-sm shadow-sm hover:shadow-md transition-shadow">
+                  <span>{ch.emoji}</span>
+                  <span className="font-medium text-gray-800">{ch.name}</span>
+                  <span className="text-gray-400 text-xs">· {ch.series}</span>
+                </span>
+              ))}
+            </div>
+          </div>
           <div className="grid gap-4 max-w-sm mx-auto">
             <button
               onClick={() => handleGenderSelect("waifu")}
@@ -183,6 +207,15 @@ export default function AnimeQuiz() {
               <p className="text-purple-200 text-sm uppercase tracking-widest mb-2">
                 ✨ Your Perfect Match — {result.compatibility}% Compatible ✨
               </p>
+              {result.certainty > 70 && (
+                <p className="text-green-300 text-xs mb-2">🎯 High Confidence Match</p>
+              )}
+              {result.certainty > 40 && result.certainty <= 70 && (
+                <p className="text-yellow-300 text-xs mb-2">📊 Good Match — try answering more specifically for higher accuracy</p>
+              )}
+              {result.certainty <= 40 && (
+                <p className="text-purple-200 text-xs mb-2">🔄 Close call with other characters! Retake for more accuracy</p>
+              )}
               <h2 className="text-4xl md:text-5xl font-bold mb-2">{c.name}</h2>
               <p className="text-purple-200 text-lg mb-3">🎬 {c.series}</p>
               <div className="inline-flex gap-2">

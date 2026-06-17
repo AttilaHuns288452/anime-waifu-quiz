@@ -163,4 +163,55 @@ export const QUESTIONS: Question[] = [
       { text: "Ambition — strive to be great 💪", modifier: { e: 1, l: 1, v: 0, p: 2, n: 0 } },
     ],
   },
+  // === NEW QUESTIONS 16-20 ===
+  {
+    id: 16,
+    question: "What kind of anime protagonist do you relate to most?",
+    answers: [
+      { text: "The underdog who never gives up 🔥", modifier: { e: 0, l: -1, v: 1, p: 2, n: 2 } },
+      { text: "The quiet genius who does their own thing 🧠", modifier: { e: -2, l: 2, v: -1, p: 1, n: 0 } },
+      { text: "The cheerful one who brings everyone together ☀️", modifier: { e: 2, l: -1, v: 2, p: 0, n: 2 } },
+      { text: "The anti-hero who plays by their own rules 🗡️", modifier: { e: 1, l: 2, v: 0, p: 2, n: -2 } },
+    ],
+  },
+  {
+    id: 17,
+    question: "How do you react when someone insults you?",
+    answers: [
+      { text: "Fire back with something worse 🔥", modifier: { e: 1, l: 0, v: 1, p: 2, n: -1 } },
+      { text: "Ignore it — not worth my energy 🧘", modifier: { e: -1, l: 1, v: -1, p: -1, n: 0 } },
+      { text: "Get quietly upset but hide it 😤", modifier: { e: -2, l: -1, v: 0, p: 0, n: 0 } },
+      { text: "Laugh it off — you do you 🤷", modifier: { e: 2, l: 0, v: 2, p: 0, n: 0 } },
+    ],
+  },
+  {
+    id: 18,
+    question: "Which anime power would you want?",
+    answers: [
+      { text: "Stand / Nen / Cursed Energy — unique abilities 🃏", modifier: { e: 0, l: 1, v: 1, p: 1, n: 0 } },
+      { text: "Healing or protection powers 🛡️", modifier: { e: 0, l: -2, v: -1, p: 0, n: 2 } },
+      { text: "Raw strength — I'll punch my way through 💪", modifier: { e: 0, l: 0, v: 0, p: 3, n: 0 } },
+      { text: "Mind control or illusion — play 4D chess ♟️", modifier: { e: 0, l: 3, v: 0, p: 1, n: -1 } },
+    ],
+  },
+  {
+    id: 19,
+    question: "What's your ideal friend group like?",
+    answers: [
+      { text: "Small, tight-knit, ride or die 👊", modifier: { e: -1, l: 0, v: 0, p: 0, n: 3 } },
+      { text: "Big chaotic family that's always together 🎉", modifier: { e: 2, l: 0, v: 2, p: 1, n: 1 } },
+      { text: "A mix of different personalities 🌈", modifier: { e: 1, l: 0, v: 1, p: 0, n: 0 } },
+      { text: "I prefer being solo or 1-2 close friends 🎯", modifier: { e: -3, l: 0, v: 0, p: 0, n: 1 } },
+    ],
+  },
+  {
+    id: 20,
+    question: "If you were an anime character, what would be your backstory?",
+    answers: [
+      { text: "Tragic past that made me stronger 🌑", modifier: { e: -1, l: 1, v: -1, p: 2, n: 0 } },
+      { text: "Ordinary person thrust into adventure 🌊", modifier: { e: 1, l: 0, v: 1, p: 1, n: 1 } },
+      { text: "Born special/chosen one with a destiny ⭐", modifier: { e: 0, l: 0, v: 0, p: 2, n: 1 } },
+      { text: "Happy childhood, became who I am today 🌸", modifier: { e: 1, l: -1, v: 1, p: 0, n: 1 } },
+    ],
+  },
 ];
