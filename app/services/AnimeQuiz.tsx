@@ -72,6 +72,7 @@ export default function AnimeQuiz() {
   const [result, setResult] = useState<QuizResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [showResult, setShowResult] = useState(false);
+  const [showShareModal, setShowShareModal] = useState(false);
 
   const handleGenderSelect = (g: Gender) => {
     setGender(g);
@@ -126,6 +127,16 @@ export default function AnimeQuiz() {
       { name: "Rem", series: "Re:Zero", emoji: "🔵" },
       { name: "Zoro", series: "One Piece", emoji: "⚔️" },
       { name: "Marin Kitagawa", series: "My Dress-Up Darling", emoji: "❤️" },
+      { name: "Tanjiro Kamado", series: "Demon Slayer", emoji: "🌊" },
+      { name: "Mikasa Ackerman", series: "AOT", emoji: "⚔️" },
+      { name: "Nobara Kugisaki", series: "JJK", emoji: "🔨" },
+      { name: "Kakashi Hatake", series: "Naruto", emoji: "📖" },
+      { name: "Luffy", series: "One Piece", emoji: "🏴‍☠️" },
+      { name: "Frieren", series: "Frieren", emoji: "✨" },
+      { name: "Zero Two", series: "Darling in the Franxx", emoji: "👹" },
+      { name: "Spike Spiegel", series: "Cowboy Bebop", emoji: "🎷" },
+      { name: "Eren Yeager", series: "AOT", emoji: "🐦" },
+      { name: "Itachi Uchiha", series: "Naruto", emoji: "👁️" },
     ];
 
     return (
@@ -352,14 +363,9 @@ export default function AnimeQuiz() {
             <div className="flex flex-wrap gap-3 pt-2 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
               <button
                 onClick={() => {
-                  if (navigator.share) {
-                    navigator.share({ title: `I got ${c.name}!`, text: shareText });
-                  } else {
-                    navigator.clipboard.writeText(shareText);
-                    alert("📋 Link copied! Share it with your friends!");
-                  }
+                  setShowShareModal(true);
                 }}
-                className="flex-1 px-5 py-3.5 bg-gradient-to-r from-purple-600 to-pink-500 text-white font-bold rounded-xl hover:shadow-lg hover:shadow-purple-300/50 transition-all duration-300"
+                className="flex-1 px-5 py-3.5 bg-gradient-to-r from-purple-600 to-pink-500 text-white font-bold rounded-xl hover:shadow-lg hover:shadow-purple-300/50 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 📤 Share Your Result
               </button>
@@ -370,6 +376,45 @@ export default function AnimeQuiz() {
                 🔄 Take Again
               </button>
             </div>
+
+            {/* Share Modal */}
+            {showShareModal && (
+              <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm" onClick={() => setShowShareModal(false)}>
+                <div className="bg-white rounded-2xl shadow-2xl p-6 max-w-sm w-full mx-4 animate-fade-in-scale" onClick={e => e.stopPropagation()}>
+                  <div className="text-center mb-4">
+                    <div className="text-4xl mb-2">{c.emoji}</div>
+                    <h3 className="text-xl font-bold text-gray-900">Share Your Result!</h3>
+                    <p className="text-sm text-gray-500 mt-1">{c.name} — {result.compatibility}% Match</p>
+                  </div>
+                  <div className="grid grid-cols-2 gap-3">
+                    <button onClick={() => { navigator.clipboard.writeText(shareText); alert("📋 Copied to clipboard!"); setShowShareModal(false); }}
+                      className="p-4 bg-gray-100 rounded-xl hover:bg-gray-200 transition-all text-center">
+                      <span className="text-2xl block mb-1">📋</span>
+                      <span className="text-xs font-medium text-gray-700">Copy Link</span>
+                    </button>
+                    <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`} target="_blank" rel="noopener noreferrer"
+                      className="p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-all text-center" onClick={() => setShowShareModal(false)}>
+                      <span className="text-2xl block mb-1">🐦</span>
+                      <span className="text-xs font-medium text-blue-700">Twitter / X</span>
+                    </a>
+                    <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://www.animewaifucompatibility.xyz')}&quote=${encodeURIComponent(shareText)}`} target="_blank" rel="noopener noreferrer"
+                      className="p-4 bg-indigo-50 rounded-xl hover:bg-indigo-100 transition-all text-center" onClick={() => setShowShareModal(false)}>
+                      <span className="text-2xl block mb-1">📘</span>
+                      <span className="text-xs font-medium text-indigo-700">Facebook</span>
+                    </a>
+                    <a href={`https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`} target="_blank" rel="noopener noreferrer"
+                      className="p-4 bg-green-50 rounded-xl hover:bg-green-100 transition-all text-center" onClick={() => setShowShareModal(false)}>
+                      <span className="text-2xl block mb-1">💬</span>
+                      <span className="text-xs font-medium text-green-700">WhatsApp</span>
+                    </a>
+                  </div>
+                  <button onClick={() => setShowShareModal(false)}
+                    className="w-full mt-4 py-2 text-sm text-gray-500 hover:text-gray-700 transition-colors">
+                    Close
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
 

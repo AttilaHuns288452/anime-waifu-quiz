@@ -126,6 +126,7 @@ export const CHARACTERS: Character[] = [
     description: "Ancient, thoughtful, and surprisingly playful. Frieren views life through the lens of eternity, cherishing fleeting moments.",
     matchReason: "You're introspective and value deep connections. You understand that the best things in life are fleeting — and that's what makes them beautiful.",
     emoji: "✨",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b176754-PCnpqIOkjhFk.png",
   },
   {
     id: "boa",
@@ -137,6 +138,7 @@ export const CHARACTERS: Character[] = [
     description: "Proud, beautiful, and completely devoted to love. Boa rules with absolute confidence but melts for the one she cherishes.",
     matchReason: "You have an unstoppable confidence that draws people in, but underneath it all, you're a romantic at heart.",
     emoji: "🐍",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b16342-kVOF6V5Q94go.png",
   },
   {
     id: "rukia",
@@ -219,6 +221,7 @@ export const CHARACTERS: Character[] = [
     description: "Mature, witty, and refreshingly honest. Mai is a level-headed realist with a surprisingly playful teasing side.",
     matchReason: "You're sharp, witty, and you see through people's nonsense. Your sarcasm is a love language.",
     emoji: "🐰",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b127222-Jh5hhP7vZ7s1.png",
   },
   {
     id: "mitsuha",
@@ -253,6 +256,7 @@ export const CHARACTERS: Character[] = [
     description: "Sweet, loving, and absolutely terrifying. Yuno's love knows no bounds — including the boundaries of sanity.",
     matchReason: "When you love, you love completely. You'd go to the ends of the earth — and beyond — for the person you choose.",
     emoji: "🔪",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b4963-7ZMcCtXW5hkY.png",
   },
   {
     id: "taiga",
@@ -264,6 +268,7 @@ export const CHARACTERS: Character[] = [
     description: "Small but fierce. Taiga is a tsundere through and through — prickly on the outside but soft and caring underneath.",
     matchReason: "You act tough but you're a softie at heart. You push people away but secretly hope they'll stay.",
     emoji: "🐯",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b12064-7PDN3ylIeAZn.png",
   },
   {
     id: "kurisu",
@@ -366,6 +371,7 @@ export const CHARACTERS: Character[] = [
     description: "Sweet, determined, and endlessly optimistic. Ochaco wants to help people and make her family proud.",
     matchReason: "You're kind-hearted, optimistic, and driven by a desire to make the world better. You genuinely care about people.",
     emoji: "💖",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b89221-gSF2a4gPbG4m.png",
   },
   // ===== HUSBANDOS (MALE) =====
   {
@@ -378,6 +384,7 @@ export const CHARACTERS: Character[] = [
     description: "Cold, efficient, and absolutely the best at what he does. Levi's harsh exterior hides a deep care for his soldiers.",
     matchReason: "You're a perfectionist who expects the best from yourself and others. You show love through action, not words.",
     emoji: "🧹",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b45627-CR68RyZmddGG.png",
   },
   {
     id: "gojo",
@@ -401,6 +408,7 @@ export const CHARACTERS: Character[] = [
     description: "Gentle, empathetic, and impossibly kind. Tanjiro feels compassion even for demons, but fights with fierce determination.",
     matchReason: "Your empathy is your greatest strength. You see the good in everyone and fight for what matters with all your heart.",
     emoji: "🌊",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b126071-BTNEc1nRIv68.png",
   },
   {
     id: "kakashi",
@@ -436,6 +444,7 @@ export const CHARACTERS: Character[] = [
     description: "Brilliant, charismatic, and willing to become a villain for the greater good. Lelouch is the ultimate chess master.",
     matchReason: "You're incredibly strategic and always thinking five moves ahead. You'd do whatever it takes to achieve your vision.",
     emoji: "♟️",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b417-gVLmIJu9phcK.png",
   },
   {
     id: "kirito",
@@ -600,6 +609,7 @@ export const CHARACTERS: Character[] = [
     description: "Believes in you when you don't believe in yourself. Kamina is the hype man we all need — bold, loud, and inspiring.",
     matchReason: "You're the friend who pushes others to be their best. Your confidence lifts everyone around you. 'Believe in me who believes in you!'",
     emoji: "🔥",
+    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b89220-KNBwaVFAR8FD.png",
   },
   {
     id: "genos",
