@@ -2,6 +2,8 @@
 
 import { useState, useMemo } from "react";
 import { CHARACTERS } from "@/lib/characters";
+import { playBakaSound, isTsundere } from "@/lib/sound-effects";
+import { getCharacterImageWithGender } from "@/lib/images";
 
 type FilterType = "all" | "waifu" | "husbando";
 
@@ -71,7 +73,12 @@ export default function CharacterLibrary() {
           {filtered.map((ch) => (
             <button
               key={ch.id}
-              onClick={() => setSelected(selected === ch.id ? null : ch.id)}
+              onClick={() => {
+                if (isTsundere({ name: ch.name, series: ch.series })) {
+                  playBakaSound();
+                }
+                setSelected(selected === ch.id ? null : ch.id);
+              }}
               className={`group p-4 rounded-2xl border-2 transition-all text-center ${
                 selected === ch.id
                   ? "border-purple-500 bg-purple-50 shadow-lg shadow-purple-200/30"
@@ -79,11 +86,13 @@ export default function CharacterLibrary() {
               }`}
             >
               <div className="w-16 h-16 mx-auto mb-2 rounded-full bg-gradient-to-br from-purple-100 to-pink-100 overflow-hidden border-2 border-gray-200">
-                {ch.imageUrl ? (
-                  <img src={ch.imageUrl} alt={ch.name} className="w-full h-full object-cover" loading="lazy" />
-                ) : (
-                  <span className="text-2xl flex items-center justify-center h-full">{ch.emoji}</span>
-                )}
+                <img
+                  src={getCharacterImageWithGender(ch.name, ch.gender, ch.imageUrl)}
+                  alt={ch.name}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                />
               </div>
               <p className="font-semibold text-gray-900 text-sm leading-tight">{ch.name}</p>
               <p className="text-xs text-gray-400 mt-0.5 truncate">{ch.series}</p>
@@ -102,11 +111,12 @@ export default function CharacterLibrary() {
             <div className="bg-white sticky top-24 rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
               <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 p-6 text-center">
                 <div className="w-24 h-24 mx-auto rounded-full border-4 border-white/40 overflow-hidden shadow-xl bg-white/10">
-                  {selectedChar.imageUrl ? (
-                    <img src={selectedChar.imageUrl} alt={selectedChar.name} className="w-full h-full object-cover" />
-                  ) : (
-                    <span className="text-4xl flex items-center justify-center h-full">{selectedChar.emoji}</span>
-                  )}
+                  <img
+                    src={getCharacterImageWithGender(selectedChar.name, selectedChar.gender, selectedChar.imageUrl)}
+                    alt={selectedChar.name}
+                    className="w-full h-full object-cover"
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                  />
                 </div>
                 <h2 className="text-2xl font-bold text-white mt-3">{selectedChar.name}</h2>
                 <p className="text-purple-200">🎬 {selectedChar.series}</p>

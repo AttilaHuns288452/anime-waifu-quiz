@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { QUESTIONS } from "@/lib/questions";
 import { QuizAnswer, QuizResult, findMatches, getPersonalityDescription } from "@/lib/matching";
 import { CHARACTERS } from "@/lib/characters";
+import { playBakaSound, isTsundere } from "@/lib/sound-effects";
+import { getCharacterImageWithGender } from "@/lib/images";
 
 type Gender = "waifu" | "husbando" | "both";
 
@@ -253,6 +255,14 @@ export default function AnimeQuiz() {
     );
   }
 
+  // Play BAKA sound when result shows a tsundere character
+  useEffect(() => {
+    if (result && showResult && isTsundere({ name: result.character.name, series: result.character.series })) {
+      const timer = setTimeout(() => playBakaSound(), 500);
+      return () => clearTimeout(timer);
+    }
+  }, [result?.character.name, showResult]);
+
   // --- Result Screen ---
   if (result && showResult) {
     const c = result.character;
@@ -268,17 +278,13 @@ export default function AnimeQuiz() {
               {/* Character Image */}
               <div className="flex justify-center mb-4">
                 <div className="w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-white/30 shadow-2xl overflow-hidden bg-white/10 flex items-center justify-center">
-                  {c.imageUrl ? (
-                    <img
-                      src={c.imageUrl}
-                      alt={c.name}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                      onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
-                    />
-                  ) : (
-                    <span className="text-7xl heartbeat">{c.emoji}</span>
-                  )}
+                  <img
+                    src={getCharacterImageWithGender(c.name, c.gender, c.imageUrl)}
+                    alt={c.name}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                  />
                 </div>
               </div>
               <p className="text-purple-200 text-sm uppercase tracking-widest mb-2">
@@ -377,11 +383,12 @@ export default function AnimeQuiz() {
                     >
                       <span className="text-lg w-8 text-center">{rank}</span>
                       <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center overflow-hidden flex-shrink-0 border border-gray-200">
-                        {match.character.imageUrl ? (
-                          <img src={match.character.imageUrl} alt="" className="w-full h-full object-cover" />
-                        ) : (
-                          <span className="text-lg">{match.character.emoji}</span>
-                        )}
+                        <img
+                          src={getCharacterImageWithGender(match.character.name, match.character.gender, match.character.imageUrl)}
+                          alt={match.character.name}
+                          className="w-full h-full object-cover"
+                          onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                        />
                       </div>
                       <div className="flex-1 min-w-0">
                         <p className="font-semibold text-gray-900 text-sm truncate">{match.character.name}</p>
