@@ -561,7 +561,7 @@ export default function AnimeQuiz() {
                 style={{ transform: 'scale(1.15)' }}
               />
             </div>
-            <p className="text-xs text-purple-400 mt-3 sticker-float font-medium">✨ Yao yi yao ~ Let's find your match! ✨</p>
+            <p className="text-xs text-purple-400 mt-3 sticker-float font-medium">✨ Let's find your perfect match! ✨</p>
           </div>
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 leading-relaxed text-center">
             {question.question}
