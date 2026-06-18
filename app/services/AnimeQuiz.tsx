@@ -74,7 +74,7 @@ export default function AnimeQuiz() {
   const [showResult, setShowResult] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
 
-  // Random sticker GIF on page load
+  // Random sticker GIF that auto-changes
   const stickerGifs = [
     "https://media.tenor.com/ldfEA4E83fAAAAAC/yao-yi-yao-yao-guang.gif",
     "https://media.tenor.com/MzVNAlfXiJsAAAAC/1.gif",
@@ -83,7 +83,26 @@ export default function AnimeQuiz() {
     "https://media.tenor.com/3GAsTSh04NkAAAAC/chibi-anime-boy.gif",
     "https://media.tenor.com/BQVULwR8-TYAAAAC/dance-chibi.gif",
   ];
-  const [currentSticker] = useState(() => stickerGifs[Math.floor(Math.random() * stickerGifs.length)]);
+  const [currentSticker, setCurrentSticker] = useState(() => stickerGifs[Math.floor(Math.random() * stickerGifs.length)]);
+
+  // Auto-switch sticker at random intervals
+  useEffect(() => {
+    const switchSticker = () => {
+      const next = Math.floor(Math.random() * stickerGifs.length);
+      setCurrentSticker(stickerGifs[next]);
+    };
+    // First switch after 3-5s, then every 4-9s
+    let cleanupInterval: NodeJS.Timeout | null = null;
+    const initialDelay = setTimeout(() => {
+      switchSticker();
+      cleanupInterval = setInterval(switchSticker, 4000 + Math.random() * 5000);
+    }, 3000 + Math.random() * 2000);
+    
+    return () => {
+      clearTimeout(initialDelay);
+      if (cleanupInterval) clearInterval(cleanupInterval);
+    };
+  }, []);
 
   const handleGenderSelect = (g: Gender) => {
     setGender(g);
