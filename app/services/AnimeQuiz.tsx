@@ -78,6 +78,10 @@ export default function AnimeQuiz() {
   const stickerGifs = [
     "https://media.tenor.com/ldfEA4E83fAAAAAC/yao-yi-yao-yao-guang.gif",
     "https://media.tenor.com/MzVNAlfXiJsAAAAC/1.gif",
+    "https://media.tenor.com/vORI9e-AqoUAAAAC/menhera-chan-chibi.gif",
+    "https://media.tenor.com/rMIo6HqaZdoAAAAC/honkai-star-rail-anime.gif",
+    "https://media.tenor.com/3GAsTSh04NkAAAAC/chibi-anime-boy.gif",
+    "https://media.tenor.com/BQVULwR8-TYAAAAC/dance-chibi.gif",
   ];
   const [currentSticker] = useState(() => stickerGifs[Math.floor(Math.random() * stickerGifs.length)]);
 
