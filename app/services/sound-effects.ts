@@ -1,3 +1,6 @@
+// isTsundere helper for non-client modules
+// For the full version with sound effects, use @/lib/sound-effects
+
 export function isTsundere(args?: { archetype?: string; series?: string; name?: string }): boolean {
   const archetype = args?.archetype;
   const series = args?.series;
@@ -27,7 +30,6 @@ export function isTsundere(args?: { archetype?: string; series?: string; name?: 
       'Yuno Gasai',
       'Rin Hsien',
       'Itsuomi Nagi',
-      'Chitoge Kirisaki',
       'Maki Nishikino',
       'Holo',
     ];

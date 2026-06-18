@@ -1,5 +1,3 @@
-"use client";
-
 // Get avatar URL for any character - guaranteed 100% coverage
 // Real AniList photo if available, otherwise DiceBear generated avatar
 export function getCharacterImage(name: string, realImageUrl?: string): string {
