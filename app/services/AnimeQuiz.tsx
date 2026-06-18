@@ -152,7 +152,19 @@ export default function AnimeQuiz() {
       <>
         <SakuraBackground />
         <div className="relative z-10 max-w-lg mx-auto px-4 py-12 text-center animate-fade-in-up">
-          <div className="text-7xl mb-4 animate-fade-in-scale">💕</div>
+          {/* Dancing sticker scene */}
+          <div className="flex justify-center mb-6">
+            <div className="sticker-glow w-36 h-36 rounded-full bg-gradient-to-br from-pink-200 via-purple-200 to-blue-200 flex items-center justify-center relative">
+              <div className="sticker-float text-2xl absolute -top-3 -right-1">💕</div>
+              <div className="sticker-float text-xl absolute -top-1 -left-2" style={{ animationDelay: '0.3s' }}>💖</div>
+              <div className="flex items-center gap-2">
+                <span className="flower-sway text-2xl">🌺</span>
+                <span className="dance-char text-5xl">💃</span>
+                <span className="dance-fast text-3xl">🕺</span>
+                <span className="flower-sway text-2xl" style={{ animationDelay: '0.5s' }}>🌸</span>
+              </div>
+            </div>
+          </div>
           <h1 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 bg-clip-text text-transparent">
             Which Anime Match Are You?
           </h1>
@@ -497,11 +509,29 @@ export default function AnimeQuiz() {
 
       {/* Question Card */}
       <div key={currentQ} className="question-enter">
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-100 p-6 md:p-8">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="flower-sway text-3xl">🌸</span>
-            <span className="dance-char text-4xl">💃</span>
-            <span className="flower-sway text-3xl" style={{ animationDelay: '0.5s' }}>🌺</span>
+        <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-100 p-6 md:p-8 overflow-hidden relative">
+          {/* Floating sparkles */}
+          <div className="sticker-sparkle text-lg" style={{top: '5%', left: '10%', animationDelay: '0s'}}>✨</div>
+          <div className="sticker-sparkle text-sm" style={{top: '15%', right: '15%', animationDelay: '0.5s'}}>⭐</div>
+          <div className="sticker-sparkle text-base" style={{bottom: '20%', left: '8%', animationDelay: '1s'}}>💫</div>
+          <div className="sticker-sparkle text-lg" style={{bottom: '10%', right: '10%', animationDelay: '1.5s'}}>🌟</div>
+
+          {/* Anime Sticker Scene */}
+          <div className="flex flex-col items-center justify-center mb-6">
+            {/* Glow background */}
+            <div className="sticker-glow w-32 h-32 rounded-full bg-gradient-to-br from-pink-200 via-purple-200 to-blue-200 flex items-center justify-center relative">
+              {/* Heart floating above */}
+              <div className="sticker-float text-2xl absolute -top-3 right-2">💕</div>
+              <div className="sticker-float text-xl absolute -top-2 left-1" style={{ animationDelay: '0.3s' }}>💖</div>
+              {/* Main dancing character */}
+              <div className="flex items-center gap-3">
+                <span className="flower-sway text-2xl">🌺</span>
+                <span className="dance-char text-5xl">💃</span>
+                <span className="dance-fast text-4xl">🕺</span>
+                <span className="flower-sway text-2xl" style={{ animationDelay: '0.5s' }}>🌸</span>
+              </div>
+            </div>
+            <p className="text-xs text-purple-400 mt-2 sticker-float font-medium">✨ Let's find your match! ✨</p>
           </div>
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 leading-relaxed text-center">
             {question.question}

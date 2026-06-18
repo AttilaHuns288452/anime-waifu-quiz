@@ -138,30 +138,90 @@
 
 /* Cute anime dance animation */
 @keyframes dance {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  15% { transform: translateY(-12px) rotate(-8deg); }
-  30% { transform: translateY(0) rotate(0deg); }
-  45% { transform: translateY(-12px) rotate(8deg); }
-  60% { transform: translateY(0) rotate(0deg); }
-  75% { transform: translateY(-6px) rotate(-4deg); }
-  90% { transform: translateY(-6px) rotate(4deg); }
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+  10% { transform: translateY(-18px) rotate(-10deg) scale(1.05); }
+  20% { transform: translateY(-5px) rotate(5deg) scale(1); }
+  30% { transform: translateY(-18px) rotate(10deg) scale(1.05); }
+  40% { transform: translateY(-5px) rotate(-5deg) scale(1); }
+  50% { transform: translateY(-18px) rotate(-10deg) scale(1.05); }
+  60% { transform: translateY(-5px) rotate(5deg) scale(1); }
+  70% { transform: translateY(-12px) rotate(-8deg) scale(1.02); }
+  80% { transform: translateY(-5px) rotate(3deg) scale(1); }
+  90% { transform: translateY(-8px) rotate(-5deg) scale(1.01); }
+}
+
+@keyframes danceFast {
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+  12% { transform: translateY(-14px) rotate(-12deg) scale(1.1); }
+  25% { transform: translateY(-3px) rotate(6deg) scale(1); }
+  37% { transform: translateY(-14px) rotate(12deg) scale(1.1); }
+  50% { transform: translateY(-3px) rotate(-6deg) scale(1); }
+  62% { transform: translateY(-14px) rotate(-12deg) scale(1.1); }
+  75% { transform: translateY(-3px) rotate(6deg) scale(1); }
+  87% { transform: translateY(-10px) rotate(-8deg) scale(1.05); }
 }
 
 @keyframes flowerSway {
-  0%, 100% { transform: rotate(-5deg); }
-  50% { transform: rotate(5deg); }
+  0%, 100% { transform: rotate(-8deg) scale(1); }
+  25% { transform: rotate(8deg) scale(1.1); }
+  50% { transform: rotate(-5deg) scale(1); }
+  75% { transform: rotate(5deg) scale(1.05); }
+}
+
+@keyframes sparkleFloat {
+  0% { opacity: 0; transform: translateY(0) scale(0) rotate(0deg); }
+  50% { opacity: 1; transform: translateY(-20px) scale(1.2) rotate(180deg); }
+  100% { opacity: 0; transform: translateY(-40px) scale(0) rotate(360deg); }
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) scale(1); opacity: 0.8; }
+  50% { transform: translateY(-15px) scale(1.05); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 0.8; }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-15deg); }
+  75% { transform: rotate(15deg); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 15px rgba(236, 72, 153, 0.3), 0 0 30px rgba(168, 85, 247, 0.1); }
+  50% { box-shadow: 0 0 25px rgba(236, 72, 153, 0.5), 0 0 50px rgba(168, 85, 247, 0.2); }
 }
 
 .dance-char {
   display: inline-block;
-  animation: dance 1.8s ease-in-out infinite;
+  animation: dance 1.5s ease-in-out infinite;
+  transform-origin: bottom center;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.dance-fast {
+  display: inline-block;
+  animation: danceFast 1.2s ease-in-out infinite;
   transform-origin: bottom center;
 }
 
 .flower-sway {
   display: inline-block;
-  animation: flowerSway 2s ease-in-out infinite;
+  animation: flowerSway 1.8s ease-in-out infinite;
   transform-origin: bottom center;
+}
+
+.sticker-sparkle {
+  position: absolute;
+  animation: sparkleFloat 1.5s ease-out infinite;
+  pointer-events: none;
+}
+
+.sticker-glow {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+.sticker-float {
+  animation: floatUp 2s ease-in-out infinite;
 }
 
 .heartbeat {
