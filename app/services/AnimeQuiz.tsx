@@ -75,6 +75,9 @@ export default function AnimeQuiz() {
   const [loading, setLoading] = useState(false);
   const [showResult, setShowResult] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => { setMounted(true); }, []);
 
   // Random sticker GIF that auto-changes
   const stickerGifs = [
@@ -148,6 +151,8 @@ export default function AnimeQuiz() {
   const shareText = result
     ? `I got ${result.character.name} (${result.compatibility}% match)! 💕 Find your anime match: https://www.animewaifucompatibility.xyz`
     : "";
+
+  if (!mounted) return null;
 
   // --- Loading Screen ---
   if (loading) {
