@@ -1,10 +1,5 @@
-import ErrorBoundary from "@/components/ErrorBoundary";
-import AnimeQuiz from "@/app/services/AnimeQuiz";
+import QuizLoader from "@/app/QuizLoader";
 
 export default function QuizPage() {
-  return (
-    <ErrorBoundary>
-      <AnimeQuiz />
-    </ErrorBoundary>
-  );
+  return <QuizLoader />;
 }
