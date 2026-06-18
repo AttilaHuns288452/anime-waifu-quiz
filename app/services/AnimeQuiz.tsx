@@ -74,6 +74,13 @@ export default function AnimeQuiz() {
   const [showResult, setShowResult] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
 
+  // Random sticker GIF on page load
+  const stickerGifs = [
+    "https://media.tenor.com/ldfEA4E83fAAAAAC/yao-yi-yao-yao-guang.gif",
+    "https://media.tenor.com/MzVNAlfXiJsAAAAC/1.gif",
+  ];
+  const [currentSticker] = useState(() => stickerGifs[Math.floor(Math.random() * stickerGifs.length)]);
+
   const handleGenderSelect = (g: Gender) => {
     setGender(g);
     setCurrentQ(0);
@@ -158,8 +165,8 @@ export default function AnimeQuiz() {
               <div className="sticker-float text-2xl absolute -top-2 right-0 z-10">💕</div>
               <div className="sticker-float text-xl absolute -top-1 -left-1 z-10" style={{ animationDelay: '0.3s' }}>💖</div>
               <img
-                src="https://media.tenor.com/ldfEA4E83fAAAAAC/yao-yi-yao-yao-guang.gif"
-                alt="Yao Yi Yao dancing"
+                src={currentSticker}
+                alt="Anime dancing sticker"
                 className="w-full h-full object-cover rounded-full"
                 style={{ transform: 'scale(1.2)' }}
               />
@@ -525,8 +532,8 @@ export default function AnimeQuiz() {
               <div className="sticker-float text-xl absolute -top-1 left-2 z-10" style={{ animationDelay: '0.3s' }}>💖</div>
               {/* Yao Yi Yao GIF */}
               <img
-                src="https://media.tenor.com/ldfEA4E83fAAAAAC/yao-yi-yao-yao-guang.gif"
-                alt="Yao Yi Yao dancing"
+                src={currentSticker}
+                alt="Anime dancing sticker"
                 className="w-36 h-36 object-cover rounded-full"
                 style={{ transform: 'scale(1.15)' }}
               />
