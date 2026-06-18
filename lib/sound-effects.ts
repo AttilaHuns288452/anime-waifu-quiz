@@ -1,7 +1,21 @@
 "use client";
 
-// Synthesize "BAKA!" sound using Web Audio API
+// Play the real "Baka!" sound from MyInstants
 export function playBakaSound() {
+  try {
+    const audio = new Audio("https://www.myinstants.com/media/sounds/baka-m.mp3");
+    audio.volume = 0.6;
+    audio.play().catch(() => {
+      // Fallback to synthesized if can't load MP3
+      playBakaSynth();
+    });
+  } catch {
+    playBakaSynth();
+  }
+}
+
+// Keep synthesized as fallback
+function playBakaSynth() {
   try {
     const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
     const now = audioContext.currentTime;
@@ -40,9 +54,7 @@ export function playBakaSound() {
     noiseGain.connect(audioContext.destination);
     noise.start(now + 0.22);
     noise.stop(now + 0.3);
-  } catch (e) {
-    // Audio not supported or blocked
-  }
+  } catch (e) {}
 }
 
 // Detect tsundere characters by name or series
