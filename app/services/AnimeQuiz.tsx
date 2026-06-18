@@ -21,7 +21,7 @@ function SakuraBackground() {
   }));
 
   return (
-    <div className="sakura-container">
+    <div className="sakura-container" suppressHydrationWarning>
       {petals.map((p) => (
         <div
           key={p.id}
@@ -85,7 +85,7 @@ export default function AnimeQuiz() {
     "https://media.tenor.com/3GAsTSh04NkAAAAC/chibi-anime-boy.gif",
     "https://media.tenor.com/BQVULwR8-TYAAAAC/dance-chibi.gif",
   ];
-  const [currentSticker, setCurrentSticker] = useState(() => stickerGifs[Math.floor(Math.random() * stickerGifs.length)]);
+  const [currentSticker, setCurrentSticker] = useState(stickerGifs[0]);
 
   // Auto-switch sticker at random intervals
   useEffect(() => {
@@ -96,9 +96,10 @@ export default function AnimeQuiz() {
     // First switch after 3-5s, then every 4-9s
     let cleanupInterval: NodeJS.Timeout | null = null;
     const initialDelay = setTimeout(() => {
+      switchSticker(); // Switch immediately on client
       switchSticker();
       cleanupInterval = setInterval(switchSticker, 4000 + Math.random() * 5000);
-    }, 3000 + Math.random() * 2000);
+    }, 100);
     
     return () => {
       clearTimeout(initialDelay);
