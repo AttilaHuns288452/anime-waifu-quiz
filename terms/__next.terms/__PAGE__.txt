@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[97367,["/_next/static/chunks/3-c5bii1rqffh.js","/_next/static/chunks/158myu8e_yme3.js"],"OutletBoundary"]
+3:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"max-w-2xl mx-auto px-4 py-12 prose prose-gray","children":[["$","h1",null,{"children":"Terms of Service"}],["$","p",null,{"children":"This is a fun personality quiz for entertainment purposes. Results are not scientific or guaranteed."}],["$","h2",null,{"children":"Use"}],["$","p",null,{"children":"Free to use. No accounts needed. Feel free to share your results!"}],["$","h2",null,{"children":"Disclaimer"}],["$","p",null,{"children":"All character names and series are property of their respective owners. This is a fan project."}]]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"eICtEAM9XzBesW0-m8mRT"}
+4:null
