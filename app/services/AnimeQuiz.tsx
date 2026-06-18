@@ -154,15 +154,15 @@ export default function AnimeQuiz() {
         <div className="relative z-10 max-w-lg mx-auto px-4 py-12 text-center animate-fade-in-up">
           {/* Dancing sticker scene */}
           <div className="flex justify-center mb-6">
-            <div className="sticker-glow w-36 h-36 rounded-full bg-gradient-to-br from-pink-200 via-purple-200 to-blue-200 flex items-center justify-center relative">
-              <div className="sticker-float text-2xl absolute -top-3 -right-1">💕</div>
-              <div className="sticker-float text-xl absolute -top-1 -left-2" style={{ animationDelay: '0.3s' }}>💖</div>
-              <div className="flex items-center gap-2">
-                <span className="flower-sway text-2xl">🌺</span>
-                <span className="dance-char text-5xl">💃</span>
-                <span className="dance-fast text-3xl">🕺</span>
-                <span className="flower-sway text-2xl" style={{ animationDelay: '0.5s' }}>🌸</span>
-              </div>
+            <div className="sticker-glow w-36 h-36 rounded-full bg-gradient-to-br from-pink-200 via-purple-200 to-blue-200 flex items-center justify-center relative overflow-hidden">
+              <div className="sticker-float text-2xl absolute -top-2 right-0 z-10">💕</div>
+              <div className="sticker-float text-xl absolute -top-1 -left-1 z-10" style={{ animationDelay: '0.3s' }}>💖</div>
+              <img
+                src="https://media.tenor.com/ldfEA4E83fAAAAAC/yao-yi-yao-yao-guang.gif"
+                alt="Yao Yi Yao dancing"
+                className="w-full h-full object-cover rounded-full"
+                style={{ transform: 'scale(1.2)' }}
+              />
             </div>
           </div>
           <h1 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 bg-clip-text text-transparent">
@@ -519,19 +519,19 @@ export default function AnimeQuiz() {
           {/* Anime Sticker Scene */}
           <div className="flex flex-col items-center justify-center mb-6">
             {/* Glow background */}
-            <div className="sticker-glow w-32 h-32 rounded-full bg-gradient-to-br from-pink-200 via-purple-200 to-blue-200 flex items-center justify-center relative">
-              {/* Heart floating above */}
-              <div className="sticker-float text-2xl absolute -top-3 right-2">💕</div>
-              <div className="sticker-float text-xl absolute -top-2 left-1" style={{ animationDelay: '0.3s' }}>💖</div>
-              {/* Main dancing character */}
-              <div className="flex items-center gap-3">
-                <span className="flower-sway text-2xl">🌺</span>
-                <span className="dance-char text-5xl">💃</span>
-                <span className="dance-fast text-4xl">🕺</span>
-                <span className="flower-sway text-2xl" style={{ animationDelay: '0.5s' }}>🌸</span>
-              </div>
+            <div className="sticker-glow w-40 h-40 rounded-full bg-gradient-to-br from-pink-200 via-purple-200 to-blue-200 flex items-center justify-center relative overflow-hidden">
+              {/* Floating hearts */}
+              <div className="sticker-float text-2xl absolute -top-2 right-1 z-10">💕</div>
+              <div className="sticker-float text-xl absolute -top-1 left-2 z-10" style={{ animationDelay: '0.3s' }}>💖</div>
+              {/* Yao Yi Yao GIF */}
+              <img
+                src="https://media.tenor.com/ldfEA4E83fAAAAAC/yao-yi-yao-yao-guang.gif"
+                alt="Yao Yi Yao dancing"
+                className="w-36 h-36 object-cover rounded-full"
+                style={{ transform: 'scale(1.15)' }}
+              />
             </div>
-            <p className="text-xs text-purple-400 mt-2 sticker-float font-medium">✨ Let's find your match! ✨</p>
+            <p className="text-xs text-purple-400 mt-3 sticker-float font-medium">✨ Yao yi yao ~ Let's find your match! ✨</p>
           </div>
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 leading-relaxed text-center">
             {question.question}
