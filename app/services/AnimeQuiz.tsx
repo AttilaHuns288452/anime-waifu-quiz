@@ -93,6 +93,10 @@ export default function AnimeQuiz() {
         const res = findMatches(newAnswers, gender!);
         setResult(res);
         setLoading(false);
+        // Save personality profile to localStorage for recommendations page
+        try {
+          localStorage.setItem("anime-personality-profile", JSON.stringify(res.profile));
+        } catch(e) {}
         setTimeout(() => setShowResult(true), 100);
       }, 1500);
     } else {
@@ -494,8 +498,12 @@ export default function AnimeQuiz() {
       {/* Question Card */}
       <div key={currentQ} className="question-enter">
         <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-100 p-6 md:p-8">
-          <div className="text-3xl mb-4">{progressEmojis[currentQ] || "✨"}</div>
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 leading-relaxed">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <span className="flower-sway text-3xl">🌸</span>
+            <span className="dance-char text-4xl">💃</span>
+            <span className="flower-sway text-3xl" style={{ animationDelay: '0.5s' }}>🌺</span>
+          </div>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 leading-relaxed text-center">
             {question.question}
           </h2>
           <div className="space-y-3">

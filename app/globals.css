@@ -136,6 +136,34 @@
   70% { transform: scale(1); }
 }
 
+/* Cute anime dance animation */
+@keyframes dance {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  15% { transform: translateY(-12px) rotate(-8deg); }
+  30% { transform: translateY(0) rotate(0deg); }
+  45% { transform: translateY(-12px) rotate(8deg); }
+  60% { transform: translateY(0) rotate(0deg); }
+  75% { transform: translateY(-6px) rotate(-4deg); }
+  90% { transform: translateY(-6px) rotate(4deg); }
+}
+
+@keyframes flowerSway {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+}
+
+.dance-char {
+  display: inline-block;
+  animation: dance 1.8s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.flower-sway {
+  display: inline-block;
+  animation: flowerSway 2s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
 .heartbeat {
   animation: heartbeat 1.3s ease-in-out infinite;
 }
