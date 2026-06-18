@@ -709,7 +709,7 @@ export const CHARACTERS: Character[] = [
     imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b120655-LfUD7Mb1Mncg.jpg",
   },
   {
-    id: "shalltear-bloodfallen",
+    id: "shalltear-bloodfallen",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b89121-N8hzLH4nfWna.png",
     name: "Shalltear Bloodfallen",
     series: "Overlord",
     gender: "waifu",
@@ -720,7 +720,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🦇",
   },
   {
-    id: "albedo",
+    id: "albedo",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b89122-Gj7MBs7F5cMJ.png",
     name: "Albedo",
     series: "Overlord",
     gender: "waifu",
@@ -731,7 +731,7 @@ export const CHARACTERS: Character[] = [
     emoji: "👼",
   },
   {
-    id: "shiro",
+    id: "shiro",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b82525-sKk2FGRKN4aK.png",
     name: "Shiro",
     series: "No Game No Life",
     gender: "waifu",
@@ -742,7 +742,7 @@ export const CHARACTERS: Character[] = [
     emoji: "♟️",
   },
   {
-    id: "stephanie-dola",
+    id: "stephanie-dola",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b82527-uwdWwl1qhzqC.png",
     name: "Stephanie Dola",
     series: "No Game No Life",
     gender: "waifu",
@@ -753,7 +753,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🍀",
   },
   {
-    id: "jibril",
+    id: "jibril",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b87887-3QKmvQM5LTwY.png",
     name: "Jibril",
     series: "No Game No Life",
     gender: "waifu",
@@ -764,7 +764,7 @@ export const CHARACTERS: Character[] = [
     emoji: "📚",
   },
   {
-    id: "senjougahara-hitagi",
+    id: "senjougahara-hitagi",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b22037-sY7GWSKYr2Nl.jpg",
     name: "Senjougahara Hitagi",
     series: "Monogatari",
     gender: "waifu",
@@ -775,7 +775,7 @@ export const CHARACTERS: Character[] = [
     emoji: "📎",
   },
   {
-    id: "sawako-kuronuma",
+    id: "sawako-kuronuma",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b6977-rCtlFRoYgE07.png",
     name: "Sawako Kuronuma",
     series: "Kimi ni Todoke",
     gender: "waifu",
@@ -786,7 +786,7 @@ export const CHARACTERS: Character[] = [
     emoji: "😊",
   },
   {
-    id: "kaori-miyazono",
+    id: "kaori-miyazono",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b69411-lxM0FRvWHqlv.png",
     name: "Kaori Miyazono",
     series: "Your Lie in April",
     gender: "waifu",
@@ -797,7 +797,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🎻",
   },
   {
-    id: "yui-hirasawa",
+    id: "yui-hirasawa",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b19565-7gMiEAm7NGNK.png",
     name: "Yui Hirasawa",
     series: "K-On!",
     gender: "waifu",
@@ -808,7 +808,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🎸",
   },
   {
-    id: "mio-akiyama",
+    id: "mio-akiyama",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b19566-XKsMgf370b4m.png",
     name: "Mio Akiyama",
     series: "K-On!",
     gender: "waifu",
@@ -819,7 +819,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🎤",
   },
   {
-    id: "ritsu-tainaka",
+    id: "ritsu-tainaka",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b19567-ztMNJBxTNqmZ.png",
     name: "Ritsu Tainaka",
     series: "K-On!",
     gender: "waifu",
@@ -830,7 +830,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🥁",
   },
   {
-    id: "shinoa-hiiragi",
+    id: "shinoa-hiiragi",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b83017-XXdnbunnBdTd.png",
     name: "Shinoa Hiiragi",
     series: "Seraph of the End",
     gender: "waifu",
@@ -841,7 +841,7 @@ export const CHARACTERS: Character[] = [
     emoji: "😏",
   },
   {
-    id: "annie-leonhart",
+    id: "annie-leonhart",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b46490-tan274Ifc1Jf.jpg",
     name: "Annie Leonhart",
     series: "Attack on Titan",
     gender: "waifu",
@@ -863,7 +863,7 @@ export const CHARACTERS: Character[] = [
     emoji: "👑",
   },
   {
-    id: "sasha-blouse",
+    id: "sasha-blouse",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b45887-QPtJH0KwqthW.jpg",
     name: "Sasha Blouse",
     series: "Attack on Titan",
     gender: "waifu",
@@ -874,7 +874,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🥔",
   },
   {
-    id: "hange-zoe",
+    id: "hange-zoe",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b71121-7R7CnQd3lHgt.png",
     name: "Hange Zoe",
     series: "Attack on Titan",
     gender: "waifu",
@@ -896,7 +896,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🎺",
   },
   {
-    id: "rei-ayanami",
+    id: "rei-ayanami",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/86-cA1zL7fyls8E.jpg",
     name: "Rei Ayanami",
     series: "Evangelion",
     gender: "waifu",
@@ -907,7 +907,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🔵",
   },
   {
-    id: "asuka-langley",
+    id: "asuka-langley",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b94-d631a3Z2KPvd.png",
     name: "Asuka Langley",
     series: "Evangelion",
     gender: "waifu",
@@ -918,7 +918,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🔴",
   },
   {
-    id: "haruhi-suzumiya",
+    id: "haruhi-suzumiya",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b251-8DTaCNkSvBQ8.png",
     name: "Haruhi Suzumiya",
     series: "Haruhi Suzumiya",
     gender: "waifu",
@@ -929,7 +929,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🌟",
   },
   {
-    id: "yuki-nagato",
+    id: "yuki-nagato",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b249-2YImP6IQTe8t.png",
     name: "Yuki Nagato",
     series: "Haruhi Suzumiya",
     gender: "waifu",
@@ -940,7 +940,7 @@ export const CHARACTERS: Character[] = [
     emoji: "📖",
   },
   {
-    id: "mikuru-asahina",
+    id: "mikuru-asahina",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b253-opGQ1w4AdkEK.jpg",
     name: "Mikuru Asahina",
     series: "Haruhi Suzumiya",
     gender: "waifu",
@@ -951,7 +951,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🎀",
   },
   {
-    id: "konata-izumi",
+    id: "konata-izumi",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/2169-5xDzQnt3MtQk.png",
     name: "Konata Izumi",
     series: "Lucky Star",
     gender: "waifu",
@@ -962,7 +962,7 @@ export const CHARACTERS: Character[] = [
     emoji: "💻",
   },
   {
-    id: "kagami-hiiragi",
+    id: "kagami-hiiragi",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b2171-OTMMewsamHiC.png",
     name: "Kagami Hiiragi",
     series: "Lucky Star",
     gender: "waifu",
@@ -973,7 +973,7 @@ export const CHARACTERS: Character[] = [
     emoji: "⚔️",
   },
   {
-    id: "tsukasa-hiiragi",
+    id: "tsukasa-hiiragi",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b2170-VHQFPIAZ5Qq6.png",
     name: "Tsukasa Hiiragi",
     series: "Lucky Star",
     gender: "waifu",
@@ -995,7 +995,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🪡",
   },
   {
-    id: "lisa-lisa",
+    id: "lisa-lisa",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b21960-3stfLc0uwgoT.png",
     name: "Lisa Lisa",
     series: "JoJos Bizarre Adventure",
     gender: "waifu",
@@ -1635,7 +1635,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🍊",
   },
   {
-    id: "akari-watanabe",
+    id: "akari-watanabe",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b191672-MozVAnqyv9oZ.png",
     name: "Akari Watanabe",
     series: "More Than a Married Couple",
     gender: "waifu",
@@ -2350,7 +2350,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🦊",
   },
   {
-    id: "tomoe",
+    id: "tomoe",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b18344-2d8Ao1wHDZ7U.png",
     name: "Tomoe",
     series: "Kamisama Kiss",
     gender: "waifu",
@@ -2361,7 +2361,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🦊",
   },
   {
-    id: "mei-tachibana",
+    id: "mei-tachibana",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b24201-GcQdQ2k0xYUh.jpg",
     name: "Mei Tachibana",
     series: "Say I Love You",
     gender: "waifu",
@@ -2372,7 +2372,7 @@ export const CHARACTERS: Character[] = [
     emoji: "😶",
   },
   {
-    id: "yamato-kurosawa",
+    id: "yamato-kurosawa",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b26243-dURfUMAhjYtz.jpg",
     name: "Yamato Kurosawa",
     series: "Say I Love You",
     gender: "husbando",
@@ -2416,7 +2416,7 @@ export const CHARACTERS: Character[] = [
     emoji: "💕",
   },
   {
-    id: "jirou-yakuin",
+    id: "jirou-yakuin",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b191673-eD8IFBOdAFv5.jpg",
     name: "Jirou Yakuin",
     series: "More Than Married Couple",
     gender: "husbando",
@@ -2427,7 +2427,7 @@ export const CHARACTERS: Character[] = [
     emoji: "😐",
   },
   {
-    id: "yuki-itose",
+    id: "yuki-itose",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b179809-pxG89n30MGwl.jpg",
     name: "Yuki Itose",
     series: "A Sign of Affection",
     gender: "waifu",
@@ -2438,7 +2438,7 @@ export const CHARACTERS: Character[] = [
     emoji: "👂",
   },
   {
-    id: "itsuomi-nagi",
+    id: "itsuomi-nagi",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b179810-E34imq24Z2Gw.jpg",
     name: "Itsuomi Nagi",
     series: "A Sign of Affection",
     gender: "husbando",
@@ -2449,7 +2449,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🌍",
   },
   {
-    id: "anna-yamada",
+    id: "anna-yamada",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b174190-Yl9xcIc5VTtI.jpg",
     name: "Anna Yamada",
     series: "Dangers in My Heart",
     gender: "waifu",
@@ -2471,7 +2471,7 @@ export const CHARACTERS: Character[] = [
     emoji: "📖",
   },
   {
-    id: "mitsumi-iwakura",
+    id: "mitsumi-iwakura",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b138851-KqCx4CjktnPl.png",
     name: "Mitsumi Iwakura",
     series: "Skip and Loafer",
     gender: "waifu",
@@ -2482,7 +2482,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🌸",
   },
   {
-    id: "sousuke-shima",
+    id: "sousuke-shima",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b138850-eqwZ11Q6sLrl.png",
     name: "Sousuke Shima",
     series: "Skip and Loafer",
     gender: "husbando",
@@ -2493,7 +2493,7 @@ export const CHARACTERS: Character[] = [
     emoji: "😊",
   },
   {
-    id: "ganta-nakami",
+    id: "ganta-nakami",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b161229-pdxEqMtNRlPI.png",
     name: "Ganta Nakami",
     series: "Insomniacs After School",
     gender: "husbando",
@@ -2858,7 +2858,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🔥",
   },
   {
-    id: "eren-yeager",
+    id: "eren-yeager",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b40882-dsj7IP943WFF.jpg",
     name: "Eren Yeager",
     series: "Attack on Titan",
     gender: "husbando",
@@ -2869,7 +2869,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🐦",
   },
   {
-    id: "spike-spiegel",
+    id: "spike-spiegel",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b1-ChxaldmieFlQ.png",
     name: "Spike Spiegel",
     series: "Cowboy Bebop",
     gender: "husbando",
@@ -2880,7 +2880,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🎷",
   },
   {
-    id: "okabe-rintarou",
+    id: "okabe-rintarou",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b35252-DY9TW6pusqeh.png",
     name: "Okabe Rintarou",
     series: "Steins;Gate",
     gender: "husbando",
@@ -2891,7 +2891,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🧪",
   },
   {
-    id: "kamina",
+    id: "kamina",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b2075-sWb5Xz76JWdX.png",
     name: "Kamina",
     series: "Gurren Lagann",
     gender: "husbando",
@@ -2902,7 +2902,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🔥",
   },
   {
-    id: "genos",
+    id: "genos",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b73979-tVi9maPID881.jpg",
     name: "Genos",
     series: "One Punch Man",
     gender: "husbando",
@@ -3259,7 +3259,7 @@ export const CHARACTERS: Character[] = [
     imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b2072-Lc6jEdsueJUK.jpg",
   },
   {
-    id: "killua-zoldyck",
+    id: "killua-zoldyck",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b27-Z5O02kQUydpT.jpg",
     name: "Killua Zoldyck",
     series: "Hunter x Hunter",
     gender: "husbando",
@@ -3281,7 +3281,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🎣",
   },
   {
-    id: "hisoka-morow",
+    id: "hisoka-morow",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b31-FZckOuu7L1un.png",
     name: "Hisoka Morow",
     series: "Hunter x Hunter",
     gender: "husbando",
@@ -4600,7 +4600,7 @@ export const CHARACTERS: Character[] = [
     emoji: "⚔️",
   },
   {
-    id: "heathcliff",
+    id: "heathcliff",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b235847-GdRns9v1BqbX.png",
     name: "Heathcliff",
     series: "Sword Art Online",
     gender: "husbando",
@@ -4611,7 +4611,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🛡️",
   },
   {
-    id: "takumi-aldini",
+    id: "takumi-aldini",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b85777-up7wugPUGKBv.jpg",
     name: "Takumi Aldini",
     series: "Food Wars",
     gender: "husbando",
@@ -4622,7 +4622,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🔪",
   },
   {
-    id: "soma-yukihira",
+    id: "soma-yukihira",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b75216-KDU8333eIcqf.jpg",
     name: "Soma Yukihira",
     series: "Food Wars",
     gender: "husbando",
@@ -4633,7 +4633,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🍳",
   },
   {
-    id: "eishi-tsukasa",
+    id: "eishi-tsukasa",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b121219-7pAoCToE3MWn.png",
     name: "Eishi Tsukasa",
     series: "Food Wars",
     gender: "husbando",
@@ -4655,7 +4655,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🌪️",
   },
   {
-    id: "rin-okumura",
+    id: "rin-okumura",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b24482-E6087V4uAVqL.jpg",
     name: "Rin Okumura",
     series: "Blue Exorcist",
     gender: "husbando",
@@ -4666,7 +4666,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🔥",
   },
   {
-    id: "yukio-okumura",
+    id: "yukio-okumura",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b24734-GgVZoNAPnxoc.png",
     name: "Yukio Okumura",
     series: "Blue Exorcist",
     gender: "husbando",
@@ -4677,7 +4677,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🔫",
   },
   {
-    id: "mephisto-pheles",
+    id: "mephisto-pheles",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b30432-I4KwsegOrzfq.png",
     name: "Mephisto Pheles",
     series: "Blue Exorcist",
     gender: "husbando",
@@ -4699,7 +4699,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🔥",
   },
   {
-    id: "kintoki-sakata",
+    id: "kintoki-sakata",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/57337.jpg",
     name: "Kintoki Sakata",
     series: "Fate/Extra",
     gender: "husbando",
@@ -4710,7 +4710,7 @@ export const CHARACTERS: Character[] = [
     emoji: "⚡",
   },
   {
-    id: "tohno-shiki",
+    id: "tohno-shiki",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b2212-pgKYEq8gGCsY.jpg",
     name: "Tohno Shiki",
     series: "Tsukihime",
     gender: "husbando",
@@ -4721,7 +4721,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🗡️",
   },
   {
-    id: "arcueid-brunestud",
+    id: "arcueid-brunestud",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b2213-xqqwnMLn1Nqc.png",
     name: "Arcueid Brunestud",
     series: "Tsukihime",
     gender: "waifu",
@@ -4732,7 +4732,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🌙",
   },
   {
-    id: "shiki-ryougi",
+    id: "shiki-ryougi",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b3105-lI0m8vJ3JQK1.png",
     name: "Shiki Ryougi",
     series: "Kara no Kyoukai",
     gender: "husbando",
@@ -4743,7 +4743,7 @@ export const CHARACTERS: Character[] = [
     emoji: "🗡️",
   },
   {
-    id: "mikiya-kokutou",
+    id: "mikiya-kokutou",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b5267-aBSt3ADW1fvW.png",
     name: "Mikiya Kokutou",
     series: "Kara no Kyoukai",
     gender: "husbando",
@@ -4754,7 +4754,7 @@ export const CHARACTERS: Character[] = [
     emoji: "📖",
   },
   {
-    id: "aoko-aozaki",
+    id: "aoko-aozaki",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b11298-QVINnNyLJCN9.png",
     name: "Aoko Aozaki",
     series: "Mahoyo",
     gender: "waifu",
@@ -4765,7 +4765,7 @@ export const CHARACTERS: Character[] = [
     emoji: "⭐",
   },
   {
-    id: "soujuurou-shizuki",
+    id: "soujuurou-shizuki",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/61129.jpg",
     name: "Soujuurou Shizuki",
     series: "Mahoyo",
     gender: "husbando",
@@ -4776,7 +4776,7 @@ export const CHARACTERS: Character[] = [
     emoji: "👊",
   },
   {
-    id: "alice-kuonji",
+    id: "alice-kuonji",    imageUrl: "https://s4.anilist.co/file/anilistcdn/character/large/b61127-LemVV2jIZFb7.jpg",
     name: "Alice Kuonji",
     series: "Mahoyo",
     gender: "waifu",
