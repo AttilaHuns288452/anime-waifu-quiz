@@ -603,13 +603,30 @@ function FeedbackForm() {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const existing = JSON.parse(localStorage.getItem("anime-feedback") || "[]");
-    existing.push({ name, message, date: new Date().toISOString() });
-    localStorage.setItem("anime-feedback", JSON.stringify(existing));
+    setSending(true);
+    try {
+      await fetch("https://docs.google.com/forms/d/e/1FAIpQLSe_QcrdDBOxYw_a4xtU-I0xX6P5_Qw9gYaxytKfcI-ipNRIfg/formResponse", {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          "entry.1591633300": "Comments",
+          "entry.326955045": message,
+          "entry.1696159737": "",
+          "entry.485428648": name,
+          "entry.879531967": "",
+          fvv: "1",
+          pageHistory: "0",
+          fbzx: "0",
+        }),
+      });
+    } catch {}
     setSent(true);
+    setSending(false);
   };
 
   if (sent) {
@@ -640,9 +657,10 @@ function FeedbackForm() {
       />
       <button
         type="submit"
-        className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-500 text-white font-bold rounded-xl hover:shadow-lg hover:shadow-purple-300/50 transition-all duration-300"
+        disabled={sending}
+        className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-500 text-white font-bold rounded-xl hover:shadow-lg hover:shadow-purple-300/50 transition-all duration-300 disabled:opacity-50"
       >
-        Send Feedback 💬
+        {sending ? "Sending..." : "Send Feedback 💬"}
       </button>
     </form>
   );
