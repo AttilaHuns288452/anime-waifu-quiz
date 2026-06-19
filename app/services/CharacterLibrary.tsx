@@ -20,10 +20,14 @@ export default function CharacterLibrary() {
     if (filter === "husbando") chars = chars.filter(c => c.gender === "husbando");
     if (search.trim()) {
       const q = search.toLowerCase();
-      chars = chars.filter(c =>
-        c.name.toLowerCase().includes(q) ||
-        c.series.toLowerCase().includes(q)
-      );
+      console.log('🔍 filtering with q=' + JSON.stringify(q));
+      chars = chars.filter(c => {
+        const match = c.name.toLowerCase().includes(q) || c.series.toLowerCase().includes(q);
+        if (match && !c.name.toLowerCase().includes(q)) console.log('  MATCH by series: ' + c.name + ' (' + c.series + ') q=' + q);
+        if (match && !c.series.toLowerCase().includes(q)) console.log('  MATCH by name: ' + c.name + ' (' + c.series + ') q=' + q);
+        return match;
+      });
+      console.log('🔍 filtered result count=' + chars.length);
     }
     return chars;
   })();
