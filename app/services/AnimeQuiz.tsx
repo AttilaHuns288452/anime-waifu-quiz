@@ -152,6 +152,14 @@ export default function AnimeQuiz() {
     ? `I got ${result.character.name} (${result.compatibility}% match)! 💕 Find your anime match: https://www.animewaifucompatibility.xyz`
     : "";
 
+  // Play BAKA sound when result shows a tsundere character
+  useEffect(() => {
+    if (result && showResult && isTsundere({ name: result.character.name, series: result.character.series })) {
+      const timer = setTimeout(() => playBakaSound(), 500);
+      return () => clearTimeout(timer);
+    }
+  }, [result?.character.name, showResult]);
+
   if (!mounted) return null;
 
   // --- Loading Screen ---
@@ -260,14 +268,6 @@ export default function AnimeQuiz() {
       </>
     );
   }
-
-  // Play BAKA sound when result shows a tsundere character
-  useEffect(() => {
-    if (result && showResult && isTsundere({ name: result.character.name, series: result.character.series })) {
-      const timer = setTimeout(() => playBakaSound(), 500);
-      return () => clearTimeout(timer);
-    }
-  }, [result?.character.name, showResult]);
 
   // --- Result Screen ---
   if (result && showResult) {
