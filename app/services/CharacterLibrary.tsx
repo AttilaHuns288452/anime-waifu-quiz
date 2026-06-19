@@ -13,6 +13,7 @@ export default function CharacterLibrary() {
   const [selected, setSelected] = useState<string | null>(null);
 
   // Calculate filtered characters on every render (420 items, fast enough)
+  console.log('🕵️ Library: search=' + JSON.stringify(search) + ' filter=' + filter + ' chars=' + CHARACTERS.length);
   const filtered = (() => {
     let chars = CHARACTERS;
     if (filter === "waifu") chars = chars.filter(c => c.gender === "waifu");
