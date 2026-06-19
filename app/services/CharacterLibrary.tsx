@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import { CHARACTERS } from "@/lib/characters";
 import { playBakaSound, isTsundere } from "@/lib/sound-effects";
 import { getCharacterImageWithGender } from "@/lib/images";
@@ -12,7 +12,8 @@ export default function CharacterLibrary() {
   const [search, setSearch] = useState("");
   const [selected, setSelected] = useState<string | null>(null);
 
-  const filtered = useMemo(() => {
+  // Calculate filtered characters on every render (420 items, fast enough)
+  const filtered = (() => {
     let chars = CHARACTERS;
     if (filter === "waifu") chars = chars.filter(c => c.gender === "waifu");
     if (filter === "husbando") chars = chars.filter(c => c.gender === "husbando");
@@ -24,7 +25,7 @@ export default function CharacterLibrary() {
       );
     }
     return chars;
-  }, [filter, search]);
+  })();
 
   const selectedChar = selected ? CHARACTERS.find(c => c.id === selected) : null;
 
@@ -41,16 +42,16 @@ export default function CharacterLibrary() {
       <div className="flex flex-wrap gap-3 mb-6 items-center">
         <div className="flex gap-2">
           {[
-            { key: "all" as FilterType, label: "✨ All", color: "purple" },
-            { key: "waifu" as FilterType, label: "👧 Waifus", color: "pink" },
-            { key: "husbando" as FilterType, label: "👦 Husbandos", color: "blue" },
-          ].map(({ key, label, color }) => (
+            { key: "all" as FilterType, label: "✨ All", cls: "bg-purple-600" },
+            { key: "waifu" as FilterType, label: "👧 Waifus", cls: "bg-pink-600" },
+            { key: "husbando" as FilterType, label: "👦 Husbandos", cls: "bg-blue-600" },
+          ].map(({ key, label, cls }) => (
             <button
               key={key}
               onClick={() => setFilter(key)}
               className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
                 filter === key
-                  ? `bg-${color}-600 text-white shadow-md`
+                  ? `${cls} text-white shadow-md`
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               }`}
             >
