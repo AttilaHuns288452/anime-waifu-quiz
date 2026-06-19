@@ -13,21 +13,16 @@ export default function CharacterLibrary() {
   const [selected, setSelected] = useState<string | null>(null);
 
   // Calculate filtered characters on every render (420 items, fast enough)
-  console.log('🕵️ Library: search=' + JSON.stringify(search) + ' filter=' + filter + ' chars=' + CHARACTERS.length);
   const filtered = (() => {
     let chars = CHARACTERS;
     if (filter === "waifu") chars = chars.filter(c => c.gender === "waifu");
     if (filter === "husbando") chars = chars.filter(c => c.gender === "husbando");
     if (search.trim()) {
       const q = search.toLowerCase();
-      console.log('🔍 filtering with q=' + JSON.stringify(q));
-      chars = chars.filter(c => {
-        const match = c.name.toLowerCase().includes(q) || c.series.toLowerCase().includes(q);
-        if (match && !c.name.toLowerCase().includes(q)) console.log('  MATCH by series: ' + c.name + ' (' + c.series + ') q=' + q);
-        if (match && !c.series.toLowerCase().includes(q)) console.log('  MATCH by name: ' + c.name + ' (' + c.series + ') q=' + q);
-        return match;
-      });
-      console.log('🔍 filtered result count=' + chars.length);
+      chars = chars.filter(c =>
+        c.name.toLowerCase().includes(q) ||
+        c.series.toLowerCase().includes(q)
+      );
     }
     return chars;
   })();
