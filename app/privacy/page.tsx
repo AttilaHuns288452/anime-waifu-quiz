@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy — Anime Waifu Compatibility Quiz",
+  description:
+    "Our privacy policy explains how we handle your data. We don't collect personal information — quiz answers stay in your browser only.",
+};
+
 export default function Privacy() {
   return (
     <div className="max-w-2xl mx-auto px-4 py-12 prose prose-gray">

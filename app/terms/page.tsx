@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms of Service — Anime Waifu Compatibility Quiz",
+  description:
+    "Terms of service for the Anime Waifu/Husbando Personality Quiz. A fun fan project for entertainment purposes — results are not scientific.",
+};
+
 export default function Terms() {
   return (
     <div className="max-w-2xl mx-auto px-4 py-12 prose prose-gray">
