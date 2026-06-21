@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.animewaifucompatibility.xyz"),
   title: "Which Anime Waifu/Husbando Are You? — Personality Quiz",
-  description: "Take the 15-question personality quiz and discover which anime character matches your real personality! Featuring 70+ waifus and husbandos from Naruto, Attack on Titan, Jujutsu Kaisen, Demon Slayer, and more!",
+  description: "Take the 15-question personality quiz and discover which anime character matches your real personality! Featuring 427+ waifus and husbandos from Naruto, Attack on Titan, Jujutsu Kaisen, Demon Slayer, and more!",
   keywords: [
     "anime waifu quiz",
     "which anime character are you",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     url: "https://www.animewaifucompatibility.xyz",
     siteName: "Anime Waifu Compatibility Quiz",
     title: "Which Anime Waifu/Husbando Are You? — Personality Quiz",
-    description: "Answer 15 fun questions and discover your perfect anime character match! 70+ characters from Naruto, AOT, JJK, Demon Slayer, and more!",
+    description: "Answer 15 fun questions and discover your perfect anime character match! 427+ characters from Naruto, AOT, JJK, Demon Slayer, and more!",
     images: [
       {
         url: "/og-image.png",
@@ -78,7 +78,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebApplication",
               name: "Anime Waifu/Husbando Personality Quiz",
-              description: "Answer 15 fun questions and discover which anime character matches your real personality!",
+              description: "Answer 15 fun questions and discover which anime character matches your real personality! Featuring 427+ characters from 40+ anime series.",
               url: "https://www.animewaifucompatibility.xyz",
               applicationCategory: "QuizApplication",
               operatingSystem: "Web",
@@ -90,7 +90,7 @@ export default function RootLayout({
               featureList: [
                 "Personality quiz",
                 "Waifu and husbando matching",
-                "70+ anime characters",
+                "427+ anime characters",
                 "Character library",
                 "Anime recommendations",
               ],
