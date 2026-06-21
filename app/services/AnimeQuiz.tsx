@@ -211,9 +211,9 @@ export default function AnimeQuiz() {
               />
             </div>
           </div>
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 bg-clip-text text-transparent">
             Which Anime Match Are You?
-          </h1>
+          </h2>
           <p className="text-gray-600 mb-6 text-lg leading-relaxed">
             Answer <strong>20 personality questions</strong> and discover your perfect <strong>waifu or husbando</strong> match — like Akinator, but for anime!
           </p>
