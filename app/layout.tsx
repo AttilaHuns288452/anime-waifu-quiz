@@ -30,6 +30,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "AnimeWaifuQuiz" }],
   robots: "index, follow",
+  alternates: {
+    canonical: "https://www.animewaifucompatibility.xyz",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -67,6 +70,33 @@ export default function RootLayout({
         {/* Google AdSense */}
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4645179646749256"
             crossOrigin="anonymous"></script>
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              name: "Anime Waifu/Husbando Personality Quiz",
+              description: "Answer 15 fun questions and discover which anime character matches your real personality!",
+              url: "https://www.animewaifucompatibility.xyz",
+              applicationCategory: "QuizApplication",
+              operatingSystem: "Web",
+              offers: {
+                "@type": "Offer",
+                price: "0",
+                priceCurrency: "USD",
+              },
+              featureList: [
+                "Personality quiz",
+                "Waifu and husbando matching",
+                "70+ anime characters",
+                "Character library",
+                "Anime recommendations",
+              ],
+            }),
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col bg-gradient-to-b from-purple-50 via-pink-50 to-blue-50">
         <header className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-200">

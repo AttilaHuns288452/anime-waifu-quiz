@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "Terms of Service — Anime Waifu Compatibility Quiz",
   description:
     "Terms of service for the Anime Waifu/Husbando Personality Quiz. A fun fan project for entertainment purposes — results are not scientific.",
+  alternates: {
+    canonical: "https://www.animewaifucompatibility.xyz/terms",
+  },
 };
 
 export default function Terms() {

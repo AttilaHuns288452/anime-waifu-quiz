@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "Privacy Policy — Anime Waifu Compatibility Quiz",
   description:
     "Our privacy policy explains how we handle your data. We don't collect personal information — quiz answers stay in your browser only.",
+  alternates: {
+    canonical: "https://www.animewaifucompatibility.xyz/privacy",
+  },
 };
 
 export default function Privacy() {
