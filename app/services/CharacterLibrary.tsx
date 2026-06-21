@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { CHARACTERS } from "@/lib/characters";
 import { playBakaSound, isTsundere } from "@/lib/sound-effects";
 import { getCharacterImageWithGender } from "@/lib/images";
@@ -102,6 +103,13 @@ export default function CharacterLibrary() {
               }`}>
                 {ch.gender === "waifu" ? "👧 Waifu" : "👦 Husbando"}
               </span>
+              <Link
+                href={`/character/${ch.id}`}
+                className="block mt-2 text-[11px] text-purple-600 hover:text-purple-800 font-medium hover:underline"
+                onClick={(e) => e.stopPropagation()}
+              >
+                View Profile →
+              </Link>
             </button>
           ))}
         </div>
@@ -134,6 +142,12 @@ export default function CharacterLibrary() {
                   <h3 className="font-bold text-gray-900 text-sm mb-1">💞 Who's Compatible?</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{selectedChar.matchReason}</p>
                 </div>
+                <Link
+                  href={`/character/${selectedChar.id}`}
+                  className="block w-full text-center px-4 py-2.5 bg-gradient-to-r from-purple-600 to-pink-500 text-white font-medium rounded-xl hover:shadow-lg transition-all text-sm"
+                >
+                  🌟 View Full Profile Page
+                </Link>
                 <div>
                   <h3 className="font-bold text-gray-900 text-sm mb-2">🧠 Personality Profile</h3>
                   <div className="grid grid-cols-5 gap-1.5 text-center text-[10px]">
