@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import type { Viewport } from "next";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  themeColor: "#7c3aed",
+};
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -80,6 +85,8 @@ export default function RootLayout({
               name: "Anime Waifu/Husbando Personality Quiz",
               description: "Answer 15 fun questions and discover which anime character matches your real personality! Featuring 427+ characters from 40+ anime series.",
               url: "https://www.animewaifucompatibility.xyz",
+              author: { "@type": "Organization", name: "AnimeWaifuQuiz" },
+              publisher: { "@type": "Organization", name: "AnimeWaifuQuiz" },
               applicationCategory: "QuizApplication",
               operatingSystem: "Web",
               offers: {
@@ -94,6 +101,41 @@ export default function RootLayout({
                 "Character library",
                 "Anime recommendations",
               ],
+            }),
+          }}
+        />
+        {/* Organization Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "AnimeWaifuQuiz",
+              url: "https://www.animewaifucompatibility.xyz",
+              logo: "https://www.animewaifucompatibility.xyz/og-image.png",
+              description: "Free anime personality quiz with 427+ characters.",
+            }),
+          }}
+        />
+        {/* WebSite Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Anime Waifu Compatibility Quiz",
+              url: "https://www.animewaifucompatibility.xyz",
+              description: "Discover which anime character matches your personality.",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: {
+                  "@type": "EntryPoint",
+                  urlTemplate: "https://www.animewaifucompatibility.xyz/?q={search_term_string}",
+                },
+                "query-input": "required name=search_term_string",
+              },
             }),
           }}
         />
