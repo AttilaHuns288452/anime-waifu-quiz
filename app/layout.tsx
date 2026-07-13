@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import type { Viewport } from "next";
+import NavLinks from "@/components/NavLinks";
 import "./globals.css";
 
 export const viewport: Viewport = {
@@ -148,15 +149,10 @@ export default function RootLayout({
               <img src="/logo.png" alt="" className="w-8 h-8" />
               Anime Match
             </a>
-            <nav className="flex gap-4 text-sm text-gray-600">
-              <a href="/" className="hover:text-purple-600">Quiz</a>
-              <a href="/library" className="hover:text-purple-600">Library</a>
-              <a href="/recommendations" className="hover:text-purple-600">Anime</a>
-              <a href="/about" className="hover:text-purple-600">About</a>
-            </nav>
+            <NavLinks />
           </div>
         </header>
-        <main className="flex-1">
+        <main className="flex-1 animate-fade-in-up">
           {children}
         </main>
         <footer className="mt-auto py-6 px-4 text-center text-sm text-gray-400">
