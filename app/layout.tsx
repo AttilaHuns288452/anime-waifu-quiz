@@ -70,6 +70,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <head>
+        <link rel="icon" href="/logo.png" type="image/png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* Google AdSense */}
@@ -143,14 +144,15 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-gradient-to-b from-purple-50 via-pink-50 to-blue-50">
         <header className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-200">
           <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
-            <a href="/" className="text-lg font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
-              💕 Anime Match
+            <a href="/" className="flex items-center gap-2 text-lg font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
+              <img src="/logo.png" alt="" className="w-8 h-8" />
+              Anime Match
             </a>
             <nav className="flex gap-4 text-sm text-gray-600">
               <a href="/" className="hover:text-purple-600">Quiz</a>
               <a href="/library" className="hover:text-purple-600">Library</a>
               <a href="/recommendations" className="hover:text-purple-600">Anime</a>
-              <a href="#feedback" className="hover:text-purple-600">Feedback</a>
+              <a href="/about" className="hover:text-purple-600">About</a>
             </nav>
           </div>
         </header>
@@ -160,11 +162,11 @@ export default function RootLayout({
         <footer className="mt-auto py-6 px-4 text-center text-sm text-gray-400">
           <p>💕 Anime Waifu/Husbando Personality Quiz — For entertainment purposes</p>
           <p className="mt-1">
+            <a href="/about" className="hover:text-purple-600">About</a>
+            {" · "}
             <a href="/privacy" className="hover:text-purple-600">Privacy</a>
             {" · "}
             <a href="/terms" className="hover:text-purple-600">Terms</a>
-            {" · "}
-            <a href="/feedback" className="hover:text-purple-600">Feedback</a>
           </p>
         </footer>
         <Analytics />
