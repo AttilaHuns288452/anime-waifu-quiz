@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const MARQUEE = [
   "hinata-hyuga","mikasa-ackerman","rem","yor-forger","nobara-kugisaki","shinobu-kocho","asuna-yuuki","marin-kitagawa","frieren","boa-hancock",
-  "gojo-satoru","levi-ackerman","itachi-uchiha","kakashi-hatake","eren-yeager","tanjiro-kamado","zoro","luffy","killua-zoldyck","eren-yeager",
+  "satoru-gojo","levi-ackerman","itachi-uchiha","kakashi-hatake","eren-yeager","tanjiro-kamado","roronoa-zoro","monkey-d-luffy","killua-zoldyck","eren-yeager",
 ].map(id => CHARACTERS.find(c=>c.id===id)).filter(Boolean) as typeof CHARACTERS;
 
 const FAQ = [

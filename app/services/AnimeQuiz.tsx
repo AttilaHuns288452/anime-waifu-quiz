@@ -10,17 +10,20 @@ import AdBannerWaifu from "@/components/AdBannerWaifu";
 
 type Gender = "waifu" | "husbando" | "both";
 
-// Sakura petals background component
+// Sakura petals background component - client-only random to avoid hydration mismatch
 function SakuraBackground() {
-  const petals = Array.from({ length: 15 }, (_, i) => ({
-    id: i,
-    left: Math.random() * 100,
-    size: 14 + Math.random() * 14,
-    delay: Math.random() * 10,
-    duration: 8 + Math.random() * 12,
-    rotation: Math.random() * 360,
-  }));
-
+  const [petals, setPetals] = useState<{ id: number; left: number; size: number; delay: number; duration: number; rotation: number }[] | null>(null);
+  useEffect(() => {
+    setPetals(Array.from({ length: 15 }, (_, i) => ({
+      id: i,
+      left: Math.random() * 100,
+      size: 14 + Math.random() * 14,
+      delay: Math.random() * 10,
+      duration: 8 + Math.random() * 12,
+      rotation: Math.random() * 360,
+    })));
+  }, []);
+  if (!petals) return null;
   return (
     <div className="sakura-container" suppressHydrationWarning>
       {petals.map((p) => (
@@ -42,14 +45,18 @@ function SakuraBackground() {
 }
 
 function Confetti({ count = 28 }: { count?: number }) {
-  const pieces = Array.from({ length: count }, (_, i) => ({
-    id: i,
-    left: Math.random() * 100,
-    delay: Math.random() * 0.9,
-    duration: 2.4 + Math.random() * 1.2,
-    color: ["#a855f7","#ec4899","#3b82f6","#f59e0b","#10b981","#ef4444"][i % 6],
-    rotate: Math.random() * 360,
-  }));
+  const [pieces, setPieces] = useState<{ id: number; left: number; delay: number; duration: number; color: string; rotate: number }[] | null>(null);
+  useEffect(() => {
+    setPieces(Array.from({ length: count }, (_, i) => ({
+      id: i,
+      left: Math.random() * 100,
+      delay: Math.random() * 0.9,
+      duration: 2.4 + Math.random() * 1.2,
+      color: ["#a855f7","#ec4899","#3b82f6","#f59e0b","#10b981","#ef4444"][i % 6],
+      rotate: Math.random() * 360,
+    })));
+  }, [count]);
+  if (!pieces) return null;
   return (<>{pieces.map(p => (<div key={p.id} className="confetti-piece" style={{ left: `${p.left}%`, background: p.color, animationDelay: `${p.delay}s`, animationDuration: `${p.duration}s`, transform: `rotate(${p.rotate}deg)` }} />))}</>);
 }
 
