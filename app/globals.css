@@ -228,6 +228,30 @@
   animation: heartbeat 1.3s ease-in-out infinite;
 }
 
+/* Marquee */
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.marquee { overflow: hidden; mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent); }
+.marquee-track { display: flex; width: max-content; animation: marquee 28s linear infinite; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+
+/* Confetti */
+@keyframes confetti { 0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; } 100% { transform: translateY(105vh) rotate(720deg); opacity: 0; } }
+.confetti-piece { position: fixed; top: -10px; width: 10px; height: 14px; border-radius: 2px; pointer-events: none; z-index: 60; animation: confetti linear forwards; }
+
+/* Score ring */
+.score-ring { transform: rotate(-90deg); }
+
+/* Thin progress shimmer */
+@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+.progress-shimmer { background: linear-gradient(90deg, #a855f7 25%, #ec4899 50%, #3b82f6 75%, #a855f7 100%); background-size: 200% 100%; animation: shimmer 1.2s linear infinite; }
+
+/* Focus rings already via Tailwind; enforce visible */
+*:focus-visible { outline: 2px solid #a855f7; outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track, .confetti-piece, .progress-shimmer, .animate-fade-in-up, .animate-fade-in-scale, .sakura-petal { animation: none !important; }
+}
+
 @media (prefers-color-scheme: dark) {
 }
 

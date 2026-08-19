@@ -6,6 +6,7 @@ import { QuizAnswer, QuizResult, findMatches, getPersonalityDescription } from "
 import { CHARACTERS } from "@/lib/characters";
 import { playBakaSound, isTsundere } from "@/lib/sound-effects";
 import { getCharacterImageWithGender } from "@/lib/images";
+import AdBannerWaifu from "@/components/AdBannerWaifu";
 
 type Gender = "waifu" | "husbando" | "both";
 
@@ -38,6 +39,18 @@ function SakuraBackground() {
       ))}
     </div>
   );
+}
+
+function Confetti({ count = 28 }: { count?: number }) {
+  const pieces = Array.from({ length: count }, (_, i) => ({
+    id: i,
+    left: Math.random() * 100,
+    delay: Math.random() * 0.9,
+    duration: 2.4 + Math.random() * 1.2,
+    color: ["#a855f7","#ec4899","#3b82f6","#f59e0b","#10b981","#ef4444"][i % 6],
+    rotate: Math.random() * 360,
+  }));
+  return (<>{pieces.map(p => (<div key={p.id} className="confetti-piece" style={{ left: `${p.left}%`, background: p.color, animationDelay: `${p.delay}s`, animationDuration: `${p.duration}s`, transform: `rotate(${p.rotate}deg)` }} />))}</>);
 }
 
 // Loading screen
@@ -273,9 +286,19 @@ export default function AnimeQuiz() {
   if (result && showResult) {
     const c = result.character;
     const profileDesc = getPersonalityDescription(result.profile);
+    const highMatch = result.compatibility >= 80;
 
     return (
       <div className="max-w-2xl mx-auto px-4 py-8">
+        {highMatch && <Confetti />}
+        {/* sticky share bar */}
+        <div className="sticky top-[57px] z-30 -mx-4 px-4 py-2 bg-white/80 backdrop-blur border-y border-gray-100 flex items-center justify-between gap-3 mb-4">
+          <span className="text-sm font-medium text-gray-700 truncate">{c.emoji} {c.name} · {result.compatibility}% match</span>
+          <div className="flex gap-2 shrink-0">
+            <button onClick={() => setShowShareModal(true)} className="px-3 py-1.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-xs font-bold hover:shadow-md transition-shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400">Share</button>
+            <button onClick={reset} className="px-3 py-1.5 rounded-full bg-gray-100 text-gray-700 text-xs font-semibold hover:bg-gray-200 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400">Retake</button>
+          </div>
+        </div>
         <div className="animate-fade-in-scale">
           {/* Result Hero */}
           <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 text-white text-center rounded-2xl shadow-2xl animate-pulse-glow relative overflow-hidden">
@@ -283,13 +306,14 @@ export default function AnimeQuiz() {
             <div className="relative z-10 p-8 md:p-10">
               {/* Character Image */}
               <div className="flex justify-center mb-4">
-                <div className="w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-white/30 shadow-2xl overflow-hidden bg-white/10 flex items-center justify-center">
+                <div className="w-48 h-64 md:w-56 md:h-72 rounded-2xl border-4 border-white/40 shadow-2xl overflow-hidden bg-white/10 flex items-center justify-center">
                   <img
                     src={getCharacterImageWithGender(c.name, c.gender, c.imageUrl)}
-                    alt={c.name}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                    alt={`${c.name} from ${c.series}`}
+                    className="w-full h-full object-cover object-top"
+                    loading="eager"
+                    decoding="async"
+                    onError={(e) => { const img=e.target as HTMLImageElement; img.style.display='none'; img.parentElement!.innerHTML=`<span class="text-6xl flex items-center justify-center h-full">${c.emoji}</span>`; }}
                   />
                 </div>
               </div>
@@ -391,8 +415,10 @@ export default function AnimeQuiz() {
                       <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center overflow-hidden flex-shrink-0 border border-gray-200">
                         <img
                           src={getCharacterImageWithGender(match.character.name, match.character.gender, match.character.imageUrl)}
-                          alt={match.character.name}
-                          className="w-full h-full object-cover"
+                          alt={`${match.character.name} from ${match.character.series}`}
+                          className="w-full h-full object-cover object-top"
+                          loading="lazy"
+                          decoding="async"
                           onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                         />
                       </div>
@@ -439,6 +465,12 @@ export default function AnimeQuiz() {
               >
                 🔄 Take Again
               </button>
+            </div>
+
+            <AdBannerWaifu />
+
+            <div className="flex justify-center">
+              <a href="https://www.effectivecpmnetwork.com/yuy7hxfcs?key=f38b2e62893ef70d40541caadb150281" target="_blank" rel="noopener sponsored" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 text-white text-sm font-semibold shadow hover:shadow-md hover:scale-[1.02] transition-all">🔥 Trending Anime Deals</a>
             </div>
 
             {/* Anime Recommendations Link */}
@@ -527,8 +559,23 @@ export default function AnimeQuiz() {
   const progress = ((currentQ) / QUESTIONS.length) * 100;
   const progressEmojis = ["🌸", "🌺", "💮", "🏵️", "🌷", "🌹", "🌻", "🌼", "💐", "🌸", "🌺", "💮", "🏵️", "🌷", "🌹"];
 
+  // keyboard 1-4
+  useEffect(() => {
+    if (!gender || result) return;
+    const onKey = (e: KeyboardEvent) => {
+      const n = Number(e.key);
+      if (n >= 1 && n <= 4) { e.preventDefault(); handleAnswer(n - 1); }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [currentQ, gender, result]);
+
   return (
     <div className="max-w-lg mx-auto px-4 py-8">
+      {/* thin gradient top progress */}
+      <div className="fixed top-[57px] left-0 right-0 h-1 bg-gray-200 z-30">
+        <div className="h-full progress-shimmer transition-all duration-700" style={{ width: `${progress}%` }} />
+      </div>
       {/* Progress */}
       <div className="mb-6 animate-fade-in-up">
         <div className="flex justify-between items-center text-sm text-gray-500 mb-2">
@@ -584,11 +631,13 @@ export default function AnimeQuiz() {
               <button
                 key={index}
                 onClick={() => handleAnswer(index)}
-                className="w-full p-4 text-left bg-gradient-to-r from-gray-50 to-white border border-gray-200 rounded-xl hover:border-purple-400 hover:from-purple-50 hover:to-pink-50 hover:shadow-lg hover:shadow-purple-200/30 transition-all duration-300 text-gray-800 font-medium group"
+                className="w-full p-4 text-left bg-gradient-to-r from-gray-50 to-white border border-gray-200 rounded-xl hover:border-purple-400 hover:from-purple-50 hover:to-pink-50 hover:shadow-lg hover:shadow-purple-200/30 transition-all duration-300 text-gray-800 font-medium group flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400"
               >
-                <span className="group-hover:translate-x-1 inline-block transition-transform duration-300">
+                <span className="w-7 h-7 rounded-full bg-gray-100 group-hover:bg-purple-600 text-gray-600 group-hover:text-white flex items-center justify-center text-xs font-bold shrink-0 transition-colors">{index + 1}</span>
+                <span className="group-hover:translate-x-0.5 inline-block transition-transform duration-300">
                   {answer.text}
                 </span>
+                <span className="ml-auto text-gray-300 group-hover:text-purple-400 text-xs hidden sm:inline">press {index + 1}</span>
               </button>
             ))}
           </div>
