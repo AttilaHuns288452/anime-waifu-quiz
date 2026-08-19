@@ -24,7 +24,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.animewaifucompatibility.xyz"),
-  title: "Which Anime Waifu/Husbando Are You? — Personality Quiz",
+  title: {
+    default: "Which Anime Waifu/Husbando Are You? — Personality Quiz",
+    template: "%s | Anime Waifu Quiz",
+  },
   description: "Take the 20-question personality quiz and discover which anime character matches your real personality! Featuring 427+ waifus and husbandos from Naruto, Attack on Titan, Jujutsu Kaisen, Demon Slayer, and more!",
   keywords: [
     "anime waifu quiz",
@@ -36,7 +39,7 @@ export const metadata: Metadata = {
     "manga character quiz",
   ],
   authors: [{ name: "AnimeWaifuQuiz" }],
-  robots: "index, follow",
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
   alternates: {
     canonical: "https://www.animewaifucompatibility.xyz",
   },
