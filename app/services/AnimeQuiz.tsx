@@ -172,13 +172,24 @@ export default function AnimeQuiz() {
     ? `I got ${result.character.name} (${result.compatibility}% match)! 💕 Find your anime match: https://www.animewaifucompatibility.xyz`
     : "";
 
-  // Play BAKA sound when result shows a tsundere character
+  // Play BAKA sound when result shows a tsundere character — must be before early returns
   useEffect(() => {
     if (result && showResult && isTsundere({ name: result.character.name, series: result.character.series })) {
       const timer = setTimeout(() => playBakaSound(), 500);
       return () => clearTimeout(timer);
     }
   }, [result?.character.name, showResult]);
+
+  // keyboard 1-4 — must be before early returns (Rules of Hooks: same hook count every render)
+  useEffect(() => {
+    if (!gender || result) return;
+    const onKey = (e: KeyboardEvent) => {
+      const n = Number(e.key);
+      if (n >= 1 && n <= 4) { e.preventDefault(); handleAnswer(n - 1); }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [currentQ, gender, result]);
 
   if (!mounted) return null;
 
@@ -565,17 +576,6 @@ export default function AnimeQuiz() {
   const question = QUESTIONS[currentQ];
   const progress = ((currentQ) / QUESTIONS.length) * 100;
   const progressEmojis = ["🌸", "🌺", "💮", "🏵️", "🌷", "🌹", "🌻", "🌼", "💐", "🌸", "🌺", "💮", "🏵️", "🌷", "🌹"];
-
-  // keyboard 1-4
-  useEffect(() => {
-    if (!gender || result) return;
-    const onKey = (e: KeyboardEvent) => {
-      const n = Number(e.key);
-      if (n >= 1 && n <= 4) { e.preventDefault(); handleAnswer(n - 1); }
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [currentQ, gender, result]);
 
   return (
     <div className="max-w-lg mx-auto px-4 py-8">
