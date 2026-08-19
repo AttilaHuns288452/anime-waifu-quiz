@@ -10,19 +10,8 @@ import AdBannerWaifu from "@/components/AdBannerWaifu";
 
 type Gender = "waifu" | "husbando" | "both";
 
-// Sakura petals background component - client-only random to avoid hydration mismatch
-function SakuraBackground() {
-  const [petals, setPetals] = useState<{ id: number; left: number; size: number; delay: number; duration: number; rotation: number }[] | null>(null);
-  useEffect(() => {
-    setPetals(Array.from({ length: 15 }, (_, i) => ({
-      id: i,
-      left: Math.random() * 100,
-      size: 14 + Math.random() * 14,
-      delay: Math.random() * 10,
-      duration: 8 + Math.random() * 12,
-      rotation: Math.random() * 360,
-    })));
-  }, []);
+// Sakura petals background - receives precomputed petals (no hooks inside, so safe to render conditionally)
+function SakuraBackground({ petals }: { petals: { id: number; left: number; size: number; delay: number; duration: number; rotation: number }[] | null }) {
   if (!petals) return null;
   return (
     <div className="sakura-container" suppressHydrationWarning>
@@ -44,18 +33,7 @@ function SakuraBackground() {
   );
 }
 
-function Confetti({ count = 28 }: { count?: number }) {
-  const [pieces, setPieces] = useState<{ id: number; left: number; delay: number; duration: number; color: string; rotate: number }[] | null>(null);
-  useEffect(() => {
-    setPieces(Array.from({ length: count }, (_, i) => ({
-      id: i,
-      left: Math.random() * 100,
-      delay: Math.random() * 0.9,
-      duration: 2.4 + Math.random() * 1.2,
-      color: ["#a855f7","#ec4899","#3b82f6","#f59e0b","#10b981","#ef4444"][i % 6],
-      rotate: Math.random() * 360,
-    })));
-  }, [count]);
+function Confetti({ pieces }: { pieces: { id: number; left: number; delay: number; duration: number; color: string; rotate: number }[] | null }) {
   if (!pieces) return null;
   return (<>{pieces.map(p => (<div key={p.id} className="confetti-piece" style={{ left: `${p.left}%`, background: p.color, animationDelay: `${p.delay}s`, animationDuration: `${p.duration}s`, transform: `rotate(${p.rotate}deg)` }} />))}</>);
 }
@@ -96,6 +74,28 @@ export default function AnimeQuiz() {
   const [showResult, setShowResult] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
   const [mounted, setMounted] = useState(false);
+  // Hooks for result screen — must be before any early return (Rules of Hooks)
+  const [sakuraPetals, setSakuraPetals] = useState<{ id: number; left: number; size: number; delay: number; duration: number; rotation: number }[] | null>(null);
+  const [confettiPieces, setConfettiPieces] = useState<{ id: number; left: number; delay: number; duration: number; color: string; rotate: number }[] | null>(null);
+  useEffect(() => {
+    setSakuraPetals(Array.from({ length: 15 }, (_, i) => ({
+      id: i, left: Math.random() * 100, size: 14 + Math.random() * 14,
+      delay: Math.random() * 10, duration: 8 + Math.random() * 12, rotation: Math.random() * 360,
+    })));
+  }, []);
+  // confetti pieces generated when result appears
+  useEffect(() => {
+    if (result && result.compatibility >= 80) {
+      setConfettiPieces(Array.from({ length: 28 }, (_, i) => ({
+        id: i, left: Math.random() * 100, delay: Math.random() * 0.9,
+        duration: 2.4 + Math.random() * 1.2,
+        color: ["#a855f7","#ec4899","#3b82f6","#f59e0b","#10b981","#ef4444"][i % 6],
+        rotate: Math.random() * 360,
+      })));
+    } else {
+      setConfettiPieces(null);
+    }
+  }, [result?.character.id, result?.compatibility]);
 
   useEffect(() => { setMounted(true); }, []);
 
@@ -216,7 +216,7 @@ export default function AnimeQuiz() {
 
     return (
       <>
-        <SakuraBackground />
+        <SakuraBackground petals={sakuraPetals} />
         <div className="relative z-10 max-w-lg mx-auto px-4 py-12 text-center animate-fade-in-up">
           {/* Dancing sticker scene */}
           <div className="flex justify-center mb-6">
@@ -297,7 +297,7 @@ export default function AnimeQuiz() {
 
     return (
       <div className="max-w-2xl mx-auto px-4 py-8">
-        {highMatch && <Confetti />}
+        {highMatch && <Confetti pieces={confettiPieces} />}
         {/* sticky share bar */}
         <div className="sticky top-[57px] z-30 -mx-4 px-4 py-2 bg-white/80 backdrop-blur border-y border-gray-100 flex items-center justify-between gap-3 mb-4">
           <span className="text-sm font-medium text-gray-700 truncate">{c.emoji} {c.name} · {result.compatibility}% match</span>
