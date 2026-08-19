@@ -10,7 +10,7 @@ export default function Error({
   reset: () => void;
 }) {
   useEffect(() => {
-    console.error("Error:", error.message, error.digest);
+    console.error("Error:", error.message, error.stack, error.digest);
   }, [error]);
 
   return (
@@ -18,7 +18,9 @@ export default function Error({
       <div className="text-center max-w-md">
         <div className="text-4xl mb-4">💔</div>
         <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>
-        <p className="text-gray-600 mb-4">An unexpected error occurred. Please try again.</p>
+        <p className="text-sm text-gray-600 mb-2 font-mono break-all bg-gray-50 p-3 rounded-lg text-left">{error.message}</p>
+        {error.digest && <p className="text-xs text-gray-400 mb-4">Digest: {error.digest}</p>}
+        <p className="text-gray-600 mb-4 text-sm">Please copy the error above and send it, or try again.</p>
         <button
           onClick={reset}
           className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-500 text-white font-bold rounded-xl hover:shadow-lg transition-all"
